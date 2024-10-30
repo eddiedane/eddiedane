@@ -1,7 +1,12 @@
 import localFont from 'next/font/local';
-import { Major_Mono_Display } from 'next/font/google';
+import { Major_Mono_Display, Notable } from 'next/font/google';
 
 export const majorMonoDisplay = Major_Mono_Display({
+  subsets: ['latin'],
+  weight: '400',
+});
+
+export const notable = Notable({
   subsets: ['latin'],
   weight: '400',
 });
