@@ -1,8 +1,16 @@
+import Intro from '@/components/sections/intro';
+import Header from '@/components/header';
+
 export default function Home() {
+  const firstName = 'Eddie';
+  const lastName = 'Dane';
+
   return (
-    <main>
-      <h1>Eddie Dane</h1>
-      <h2>Web Developer</h2>
-    </main>
+    <>
+      <Header />
+      <main className='container'>
+        <Intro />
+      </main>
+    </>
   );
 }

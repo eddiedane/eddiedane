@@ -1,0 +1,3 @@
+.cta-btn {
+  @apply !bg-orange-600 !text-stone-100 !shadow-sm hover:!bg-orange-700;
+}
