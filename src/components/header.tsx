@@ -3,10 +3,10 @@
 import FragLink from '@/components/frag-link';
 import Logo from '@/components/logo';
 import Drawer from '@/components/drawer';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState('Intro');
+  // const [activeSection, setActiveSection] = useState('Intro');
 
   return (
     <header className='container fixed top-0 left-0 right-0 z-50 h-14 backdrop-blur-2xl bg-[#fafaf900] border-b'>
@@ -16,8 +16,8 @@ export default function Header() {
             <Logo shuffle={false} />
           </FragLink>
           <div className='flex justify-between items-center gap-3'>
-            <span className='font-semibold'>{activeSection}</span>
-            <Drawer activeSection={activeSection} />
+            {/* <span className='font-semibold'>{activeSection}</span> */}
+            <Drawer /* activeSection={activeSection} */ />
           </div>
         </div>
       </nav>

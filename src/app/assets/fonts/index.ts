@@ -1,5 +1,5 @@
 import localFont from 'next/font/local';
-import { Major_Mono_Display, Notable } from 'next/font/google';
+import { Major_Mono_Display, Notable, Chakra_Petch } from 'next/font/google';
 
 export const majorMonoDisplay = Major_Mono_Display({
   subsets: ['latin'],
@@ -9,6 +9,11 @@ export const majorMonoDisplay = Major_Mono_Display({
 export const notable = Notable({
   subsets: ['latin'],
   weight: '400',
+});
+
+export const chakraPetch = Chakra_Petch({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 export const metropolis = localFont({
