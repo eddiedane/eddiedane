@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-const DELAY_SHOW = 2500;
+const DELAY_SHOW = 0;
 
 export const CentralObject = forwardRef(
   ({ children, position = [0, 0, 0], rotation = [0, 0, 0] }, ref) => {
