@@ -1,0 +1,11 @@
+Model Information:
+* title:	Golang 3D
+* source:	https://sketchfab.com/3d-models/golang-3d-15eb07b1c2a542c89b938d683ecf4fc0
+* author:	Juan martín (https://sketchfab.com/napoleon67y)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Golang 3D" (https://sketchfab.com/3d-models/golang-3d-15eb07b1c2a542c89b938d683ecf4fc0) by Juan martín (https://sketchfab.com/napoleon67y) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

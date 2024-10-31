@@ -1,6 +1,6 @@
 import { notable } from '@/app/assets/fonts';
 import { cn } from '@/lib/utils';
-import Contacts from '@/components/contacts';
+import Orbit from '@/components/3d/orbit';
 
 export default function Intro() {
   const firstName = 'Eddie';
@@ -8,7 +8,7 @@ export default function Intro() {
 
   return (
     <section id='intro' className='min-h-screen flex flex-col justify-center'>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-8 -mb-24'>
         <h1
           id='names'
           className={cn(
@@ -18,16 +18,17 @@ export default function Intro() {
             'leading-none',
             'tracking-tighter',
             'flex flex-col',
+            'container',
           )}
           style={{ perspective: '2000px' }}
           aria-label={`${firstName} ${lastName}`}
         >
-          <span className='text-stone-700 dark: dark:text-stone-200'>
+          <span className='text-stone-700 dark:text-stone-100'>
             {firstName.split('').map((letter, index) => (
               <span key={index}>{letter}</span>
             ))}
           </span>
-          <span className='text-stone-400 dark:text-stone-500 self-end'>
+          <span className='text-stone-400 dark:text-stone-500'>
             {lastName.split('').map((letter, index) => (
               <span key={index}>{letter}</span>
             ))}
@@ -35,12 +36,15 @@ export default function Intro() {
         </h1>
         <h2
           className={cn(
-            'from-orange-300 via-orange-400 to-orange-200 text-transparent bg-gradient-to-br bg-clip-text',
-            'text-2xl tracking-widest font-bold uppercase',
+            'bg-orange-500',
+            'text-stone-950 text-2xl tracking-widest font-bold uppercase',
           )}
         >
-          Web Developer
+          <span className='container block'>Web Developer</span>
         </h2>
+      </div>
+      <div className='h-80 relative top-10'>
+        <Orbit />
       </div>
     </section>
   );

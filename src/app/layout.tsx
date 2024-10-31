@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={cn('antialiased overflow-hidden', metropolis.className)}>
+      <body className={cn(metropolis.className, 'antialiased overflow-hidden')}>
         <div className='max-h-screen overflow-y-auto'>{children}</div>
       </body>
     </html>
