@@ -16,7 +16,7 @@ export default function Projects() {
         <h2 className='text-3xl font-extrabold tracking-tighter'>
           <span className='hidden'>From&nbsp;</span>Concepts to Reality
         </h2>
-        <p className='prose prose-sm prose-stone leading-tight tracking-tight'>
+        <p className='prose prose-sm prose-stone dark:prose-invert leading-tight tracking-tight'>
           Every project starts with an idea. Here&apos;s a collection of my work and projects, where
           concepts are transformed into functional solutions and digital experiences.
         </p>
@@ -51,7 +51,7 @@ function IlloProjectCard({ size = 72 }: ProjectCardProps) {
         <Image src={illoAnalyticsCropped} alt='illo orders analytics page' />
         <div className='absolute inset-0 flex items-center justify-center bg-stone-50/50 backdrop-blur-[1.5px]'>
           <Image src={illoLogo} alt='illo logo' draggable={false} className='w-16 h-auto' />
-          <span className='text-7xl font-semibold'>illo</span>
+          <span className='text-7xl font-semibold dark:text-stone-950'>illo</span>
         </div>
       </div>
       <div className='p-3 text-sm leading-none'>
@@ -61,7 +61,7 @@ function IlloProjectCard({ size = 72 }: ProjectCardProps) {
         </p>
         <p className='text-xs font-extrabold text-stone-500 mt-3 lowercase smallcaps text-right'>
           <span className='text-sm'>
-            Work at <span className='text-stone-950'>Dreama</span>
+            Work at <span className='dark:text-stone-200'>Dreama</span>
             <span className='text-blue-500'>x</span>
           </span>{' '}
           <br /> 2021 - 2023
