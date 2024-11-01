@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .skills-block {
+    @apply bg-stone-200 box-border px-2 py-2 flex justify-center items-center rounded-lg;
+  }
+}
