@@ -1,3 +1,5 @@
+@import './book.css';
+
 @tailwind components;
 
 @layer components {
@@ -8,6 +10,44 @@
   @media (prefers-color-scheme: dark) {
     .skills-block {
       @apply bg-stone-300;
+    }
+  }
+
+  .trophy > img {
+    transform: scale(1);
+    transition: all .3s ease-in-out allow-discrete;
+  }
+
+  .trophy:hover > img {
+    transform: scale(1.02);
+  }
+
+  .trophy > span {
+    text-decoration-line: none;
+    text-decoration-offset: 2px;
+  }
+
+  .trophy:hover > span {
+    text-decoration-line: underline;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .trophy > img {
+      box-shadow: 2.0px 4.0px 4.0px hsl(0deg 0% 50% / 0.44);
+    }
+    
+    .trophy:hover > img {
+      box-shadow: 2.9px 5.8px 5.8px hsl(0deg 0% 50% / 0.41);
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    .trophy > img {
+      box-shadow: 2.0px 4.0px 4.0px hsl(0deg 0% 50% / 0.44);
+    }
+    
+    .trophy:hover > img {
+      box-shadow: 2.9px 5.8px 5.8px hsl(0deg 0% 50% / 0.41);
     }
   }
 }
