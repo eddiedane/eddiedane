@@ -58,7 +58,9 @@ export default function Education() {
   return (
     <section className='min-h-screen flex flex-col justify-center'>
       <div className='flex flex-col items-center gap-6'>
-        <h2 className='text-3xl font-extrabold tracking-tighter'>A Learning Journey</h2>
+        <h2 className='text-3xl font-extrabold tracking-tighter text-center px-5'>
+          <span className='hidden'>My Journey of </span>Growth & Knowledge
+        </h2>
         <div className='relative self-start w-full'>
           <h3 className='sr-only'>Certificates and Trophies</h3>
           <div

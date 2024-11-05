@@ -34,12 +34,12 @@ export default function Contacts({ showLabel = true, className }: ContactsProps)
       Icon: FaGithub,
       title: '@eddiedane',
     },
-    {
+    /* {
       name: 'Upwork',
       link: 'https://www.upwork.com/freelancers/~01b8abbbfa0fa41e71?mp_source=share',
       Icon: FaUpwork,
       title: 'Eddie Dane on Upwork',
-    },
+    }, */
   ];
 
   return (
