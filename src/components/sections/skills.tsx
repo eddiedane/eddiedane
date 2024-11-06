@@ -101,7 +101,7 @@ export default function Skills() {
             <span
               className={cn(
                 'bg-gradient-to-br',
-                'text-center font-bold text-xl lg:text-2xl leading-tight lg:leading-tighter',
+                'text-center font-extrabold text-xl leading-tight lg:leading-5',
                 'from-purple-600  to-blue-500',
                 'bg-clip-text',
                 'text-transparent',

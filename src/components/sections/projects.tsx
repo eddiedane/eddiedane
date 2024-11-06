@@ -12,17 +12,23 @@ type ProjectCardProps = {
 export default function Projects() {
   return (
     <section id='projects' className='min-h-screen flex flex-col justify-center gap-6 snap-start'>
-      <div className='container flex flex-col gap-2 text-center'>
-        <h2 className='text-3xl font-extrabold tracking-tighter'>
+      <div className='container px-5 flex flex-col gap-2 text-center items-center'>
+        <h2 className='font-extrabold xl:text-4xl md:text-3xl text-2xl tracking-tighter text-stone-800 dark:text-stone-100'>
           <span className='hidden'>From&nbsp;</span>Concepts to Reality
         </h2>
-        <p className='prose prose-sm prose-stone dark:prose-invert leading-tight tracking-tight'>
+        <p className='prose prose-sm prose-stone dark:prose-invert leading-tight tracking-tight md:max-w-[36em]'>
           Every project starts with an idea. Here&apos;s a collection of my work and projects, where
           concepts are transformed into functional solutions and digital experiences.
         </p>
       </div>
 
-      <ul className='flex items-start flex-nowrap overflow-y-hidden overflow-x-auto scrollbar-hidden gap-14 w-full px-5'>
+      <ul
+        className={cn(
+          'flex items-start md:justify-center flex-nowrap',
+          'overflow-y-hidden overflow-x-auto scrollbar-hidden',
+          'gap-14 w-full px-5',
+        )}
+      >
         <li>
           <IlloProjectCard />
         </li>
@@ -57,7 +63,7 @@ function IlloProjectCard({ size = 72 }: ProjectCardProps) {
       <div className='p-3 text-sm leading-none'>
         <h3 className='inline font-semibold text-2xl'>illo&nbsp;</h3>
         <p className='inline'>
-          Extensive <span className='inline-block'>e-commerce</span> and stores management platform.
+          A premium <span className='inline-block'>e-commerce</span> and stores management platform.
         </p>
         <p className='text-xs font-extrabold text-stone-500 mt-3 lowercase smallcaps text-right'>
           <span className='text-sm'>
