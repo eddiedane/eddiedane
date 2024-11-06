@@ -8,7 +8,7 @@ import mysqlLogo from '@/app/assets/images/skills/mysql.png';
 import mongodbLogo from '@/app/assets/images/skills/mongodb.png';
 import postgresLogo from '@/app/assets/images/skills/postgresql.png';
 import nextLogo from '@/app/assets/images/skills/next.png';
-import nuxtLogo from '@/app/assets/images/skills/nuxt.svg';
+import reactLogo from '@/app/assets/images/skills/react.svg';
 import goLogo from '@/app/assets/images/skills/go.svg';
 import nodeLogo from '@/app/assets/images/skills/node.svg';
 import pythonLogo from '@/app/assets/images/skills/python.svg';
@@ -37,83 +37,117 @@ const OTHER = 'others';
 
 export default function Skills() {
   return (
-    <section id='skills' className='min-h-screen flex flex-col justify-center gap-6 snap-start'>
-      <div className='container flex flex-col gap-2 text-center'>
+    <section
+      id='skills'
+      className='min-h-screen flex flex-col justify-center items-center gap-6 snap-start'
+    >
+      <div className='container flex flex-col items-center gap-2 text-center'>
         <h2 className='text-3xl font-extrabold tracking-tighter'>
-          Building Blocks<span className='hidden'> of My Work</span>
+          Building Blocks<span className='hidden sm:inline'> of My Work</span>
         </h2>
-        <p className='prose prose-sm prose-stone dark:prose-invert leading-tight tracking-tight'>
+        <p className='prose prose-sm prose-stone dark:prose-invert leading-tight tracking-tight md:max-w-[30em]'>
           My continuous evolving skill set is a reflection of both my curiosity and ability to adapt
           to different technologies and environments.
         </p>
       </div>
-      <div>
-        <div className='container grid grid-cols-12 grid-rows-5 gap-2'>
-          <div className='skills-block col-span-6 row-span-2 flex-col gap-1'>
-            <div className='flex justify-center items-center gap-4'>
-              <Image src={mysqlLogo} alt='MySQL' className='w-10 h-auto' />
-              <Image src={postgresLogo} alt='PostgreSQL' className='w-10 h-auto' />
-            </div>
-            <Image src={mongodbLogo} alt='MongoDB' className='w-32 h-auto' />
-          </div>
-          <div className='skills-block col-span-2 row-span-1'>
-            <Image src={nextLogo} alt='Next.js' className='w-14 h-auto' />
-          </div>
-          <div className='skills-block col-span-4 row-span-1 flex justify-center items-center'>
+      <div className='md:w-[36em] lg:w-[56em] xl:w-[64em]'>
+        <div className='container grid grid-cols-12 grid-rows-5 xl:grid-rows-4 gap-2 sm:gap-3 lg:gap-4 md:max-h-[24em] lg:max-h-max xl:max-h-[20em]'>
+          <div className='skills-block col-span-6 sm:col-span-5 xl:col-span-4 row-span-2 xl:row-span-3 flex-col gap-1'>
+            <Image
+              src={goLogo}
+              alt='The go programming language'
+              className='w-10/12 sm:w-8/12 h-auto'
+            />
             <span
               className={cn(
-                'text-2xl font-semibold text-stone-950 tracking-widest',
-                'bg-gradient-to-r from-black to-green-600 bg-clip-text text-transparent',
+                'font-extrabold',
+                'uppercase',
+                'relative top-3',
+                'tracking-wider',
+                'text-stone-600',
+                'sm:text-xl',
+              )}
+            >
+              simplicity
+            </span>
+          </div>
+          <div className='skills-block col-span-2 xl:col-span-1 row-span-1'>
+            <Image src={nextLogo} alt='Next.js' className='w-14 md:w-12 lg:w-14 h-auto' />
+          </div>
+          <div className='skills-block col-span-4 sm:col-span-3 xl:col-span-2 row-span-1 flex justify-center items-center'>
+            <span
+              className={cn(
+                'text-3xl sm:text-4xl',
+                'font-semibold',
+                'text-stone-950',
+                'tracking-widest',
+                'bg-gradient-to-r from-black to-cyan-400 bg-clip-text text-transparent',
               )}
             >
               MERN
             </span>
           </div>
 
-          <div className='skills-block col-span-2 row-span-1'>
+          <div className='skills-block col-span-2 xl:col-span-1 row-span-1'>
             <Image
-              src={nuxtLogo}
-              alt='Nuxt, the vue.js fullstack framework'
-              className='sm:w-14 w-16 h-auto'
+              src={reactLogo}
+              alt='React, the library for web and native user interfaces'
+              className='sm:w-14 w-16 md:12 h-auto'
             />
           </div>
 
-          <div className='skills-block row-span-1 col-span-4 relative'>
-            <IoAccessibility className='absolute w-8 h-auto left-5 text-purple-800/80' />
-            <FaAccessibleIcon className='absolute w-8 h-auto right-5 text-blue-800/80' />
+          <div className='skills-block row-span-1 col-span-4 sm:col-span-7 xl:col-span-4 relative'>
+            <IoAccessibility className='absolute w-9 sm:w-12 h-auto left-5 xl:left-3 sm:left-10 text-purple-800/80' />
+            <span
+              className={cn(
+                'bg-gradient-to-br',
+                'text-center font-bold text-xl lg:text-2xl leading-tight lg:leading-tighter',
+                'from-purple-600  to-blue-500',
+                'bg-clip-text',
+                'text-transparent',
+                'sm:block hidden',
+              )}
+            >
+              web <br /> accessibility
+            </span>
+            <FaAccessibleIcon className='absolute w-9 sm:w-12 h-auto right-5 xl:right-3 sm:right-10 text-blue-800/80' />
           </div>
 
-          <div className='skills-block col-span-7 row-span-2 flex-wrap gap-4'>
-            <Image src={goLogo} alt='Go' className='w-14 h-auto' />
-            <Image src={nodeLogo} alt='Node' className='w-12 h-auto' />
-            <Image src={pythonLogo} alt='Python' className='w-8 h-auto' />
-            <div className='flex gap-3 relative -top-4'>
-              <Image src={grpcLogo} alt='gRPC' className='w-10 h-auto' />
-              <span className={cn('text-sky-500 font-semibold')}>REST</span>
+          <div className='skills-block col-span-2 xl:col-span-1 row-span-2 flex-col items-center gap-4'>
+            <Image src={nodeLogo} alt='Node' className='w-14 h-auto' />
+            <Image src={pythonLogo} alt='Python' className='w-10 sm:w-14 h-auto' />
+          </div>
+
+          <div className='skills-block col-span-5 xl:col-span-4 row-span-2 xl:row-span-3 flex-col flex-wrap gap-2'>
+            <div className='flex justify-center items-center gap-4'>
+              <Image src={mysqlLogo} alt='MySQL' className='w-10 sm:w-16 xl:w-20 h-auto' />
+              <Image src={postgresLogo} alt='PostgreSQL' className='w-10 sm:w-16 xl:w-20 h-auto' />
             </div>
+            <Image src={mongodbLogo} alt='MongoDB' className='w-32 sm:w-36 xl:w-48 h-auto' />
           </div>
 
-          <div className='skills-block col-span-5 row-span-1 gap-1'>
-            <Image src={gitLogo} alt='Git' className='w-6 h-auto' />
-            <Image src={kubernetesLogo} alt='Kubernetes' className='w-6 h-auto' />
-            <Image src={dockerLogo} alt='Docker' className='w-16 h-auto' />
+          <div className='skills-block col-span-5 xl:col-span-3 row-span-1 gap-2 sm:gap-3'>
+            <Image src={kubernetesLogo} alt='Kubernetes' className='w-7 sm:w-10 h-auto' />
+            <Image src={dockerLogo} alt='Docker' className='w-24 sm:w-32 h-auto' />
           </div>
 
-          <div className='skills-block row-span-2 col-span-5'>
-            <Image src={awsLogo} alt='AWS' className='sm:w-32 w-20 h-auto' />
+          <div className='skills-block row-span-2 col-span-5 xl:col-span-3 xl:row-span-2'>
+            <Image src={awsLogo} alt='AWS' className='w-24 sm:w-32 lg:w-52 h-auto' />
           </div>
 
-          <div className='skills-block col-span-2 row-span-1'>
-            <Image src={figmaLogo} alt='Figma' className='w-6 h-auto' />
+          <div className='skills-block row-span-1 col-span-4 xl:col-span-3'>
+            <span className='text-2xl sm:text-3xl lg:text-4xl tracking-widest font-extrabold text-stone-950'>
+              AGILE
+            </span>
           </div>
 
-          <div className='skills-block row-span-1 col-span-5'>
-            <span className='text-2xl tracking-widest font-extrabold text-stone-950'>AGILE</span>
+          <div className='skills-block col-span-3 xl:col-span-2 row-span-1'>
+            <Image src={gitLogo} alt='Git' className='w-16 sm:w-24 md:w-20 lg:w-24 h-auto' />
           </div>
         </div>
         <div>
           <Tabs defaultValue={BACKEND} className='mt-2'>
-            <TabsList className='bg-transparent gap-4 p-0 m-0 overflow-x-auto scrollbar-hidden scroll-edge-sm px-4 w-full justify-start'>
+            <TabsList className='bg-transparent gap-4 p-0 m-0 overflow-x-auto scrollbar-hidden px-4 w-full justify-start'>
               {getAllCategories().map((category) => (
                 <TabsTrigger
                   key={category}
@@ -132,7 +166,7 @@ export default function Skills() {
 
             {getAllCategories().map((category) => (
               <TabsContent key={category} value={category} className='m-0'>
-                <ul className='inline-flex gap-5 text-lg overflow-x-auto scroll-edge-sm px-4 scrollbar-hidden w-full'>
+                <ul className='inline-flex gap-5 overflow-x-auto px-4 scrollbar-hidden w-full'>
                   {getSkills()
                     .filter((skill) => skill.categories.includes(category))
                     .map((skill) => (

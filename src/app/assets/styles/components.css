@@ -11,6 +11,12 @@
     }
   }
 
+  @media (min-width: 1024px) {
+    .skills-block {
+      @apply rounded-xl;
+    }
+  }
+
   .trophy > img {
     transform: scale(1);
     transition: all .3s ease-in-out allow-discrete;
