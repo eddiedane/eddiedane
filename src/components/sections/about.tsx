@@ -1,60 +1,91 @@
-import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import Contacts from '@/components/contacts';
-import Message from '@/components/message';
 import profilePicture from '@/app/assets/images/profile.jpeg';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 export default function About() {
   return (
-    <section id='about' className='relative overflow-hidden snap-start'>
-      <div className={cn('flex flex-col gap-6', 'pt-14 pb-8', 'min-h-screen')}>
-        <div className='relative z-10'>
+    <section
+      id='about'
+      className={cn(
+        'min-h-screen snap-start',
+        'bg-stone-50 dark:bg-stone-800',
+        'relative overflow-hidden',
+        'flex items-center justify-center',
+      )}
+    >
+      <div
+        className={cn(
+          'container',
+          'flex md:justify-center md:items-center sm:flex-row flex-col xl:gap-16 lg:gap-10 gap-6',
+          'sm:px-5 md:pt-0 sm:pt-24 pt-16 pb-8',
+        )}
+      >
+        <div className='relative z-10 md:hidden'>
           <Image
             src={profilePicture}
             alt="Eddie Dane's Portrait"
-            className='max-w-full grayscale transition-all duration-1000 hover:grayscale-0'
+            className='abt-img xl:max-w-sm lg:max-w-xs sm:max-w-60 sm:rounded-full max-w-full'
           />
         </div>
-        <div>
-          <div
+        <div
+          className={cn(
+            'sm:mt-0 sm:pt-0',
+            '-mt-52 pt-12',
+            'sm:px-0 px-5',
+            'relative z-20',
+            'bg-gradient-to-b from-transparent',
+            'via-stone-50 to-stone-100 dark:to-stone-800 dark:via-stone-700',
+            'to-30% via-10%',
+            'sm:bg-none',
+            'max-w-xl',
+          )}
+        >
+          <h2
             className={cn(
-              '-mt-64 pt-12 px-5',
-              'relative z-20',
-              'bg-gradient-to-b from-transparent via-stone-50 to-stone-100 to-50% dark:via-stone-700 via-15% dark:to-stone-800',
+              'font-extrabold tracking-tighter',
+              'xl:text-4xl md:text-3xl text-2xl',
+              'text-stone-800 dark:text-stone-100',
+              'text-center md:text-left',
+              'mb-4',
             )}
           >
-            <h2 className='text-3xl font-extrabold text-center my-4 tracking-tighter'>
-              The Guy Behind the Code
-            </h2>
-            <div>
-              <p className='prose-base abt-item flex flex-col gap-2 text-justify'>
-                <em className='font-black text-lg'>
-                  A web developer, dedicated to building user-friendly, efficient and scalable web
-                  applications, with over 5 years of experience.&nbsp;
-                  <Link
-                    href='#'
-                    className={cn(
-                      'inline-block',
-                      'uppercase text-base text-orange-700 font-black tracking-wider',
-                      'no-underline hover:underline',
-                      'p-0',
-                    )}
-                  >
-                    view my résumé
-                  </Link>
-                </em>
-                <span>
-                  Thinking back to my early days with programming , from writing HTML on my phone
-                  when I didn’t yet have a computer to now building and deploying fully functional
-                  web apps and tools, one of the things that have remained unchanged about me is my
-                  endless fascination with programming, the fact that I can programmatically
-                  describe an idea with code and bring it to reality, has given me a creative
-                  freedom that drives my love and obsession for developing for the web
-                </span>
-              </p>
-            </div>
+            The Person Behind the Craft
+          </h2>
+          <div>
+            <p className='prose-base flex flex-col gap-2 text-justify md:text-left'>
+              <em className='font-black text-lg'>
+                A web developer, dedicated to building user-friendly, efficient and scalable web
+                applications, with over 5 years of experience.&nbsp;
+                <Link
+                  href='#'
+                  className={cn(
+                    'inline-block',
+                    'uppercase text-base text-orange-700 font-black tracking-wider',
+                    'no-underline hover:underline',
+                    'p-0',
+                  )}
+                >
+                  view my résumé
+                </Link>
+              </em>
+              <span>
+                Thinking back to my early days with programming , from writing HTML on my phone when
+                I didn’t yet have a computer to now building and deploying fully functional web apps
+                and tools, one of the things that have remained unchanged about me is my endless
+                fascination with programming, the fact that I can programmatically describe an idea
+                with code and bring it to reality, has given me a creative freedom that drives my
+                love and obsession for developing for the web
+              </span>
+            </p>
           </div>
+        </div>
+        <div className='hidden md:block self-start'>
+          <Image
+            src={profilePicture}
+            alt="Eddie Dane's Portrait"
+            className={cn('xl:max-w-52 max-w-60', 'rounded-e-full')}
+          />
         </div>
       </div>
     </section>
