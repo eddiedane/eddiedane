@@ -56,7 +56,7 @@ const trophiesData: Trophy[] = [
 
 export default function Education() {
   return (
-    <section className='min-h-screen flex flex-col justify-center'>
+    <section className='min-h-screen flex flex-col justify-center snap-start'>
       <div className='flex flex-col items-center gap-6'>
         <h2 className='text-3xl font-extrabold tracking-tighter text-center px-5'>
           <span className='hidden'>My Journey of </span>Growth & Knowledge

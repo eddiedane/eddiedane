@@ -37,7 +37,7 @@ export default function RootLayout({
           'text-stone-950 dark:text-stone-100',
         )}
       >
-        <div className='max-h-screen overflow-y-auto'>{children}</div>
+        <div className='max-h-screen overflow-y-auto snap-y snap-mandatory'>{children}</div>
       </body>
     </html>
   );

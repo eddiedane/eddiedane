@@ -7,8 +7,8 @@ import Link from 'next/link';
 
 export default function About() {
   return (
-    <section id='about' className='relative overflow-hidden'>
-      <div className={cn('flex flex-col gap-6', 'pt-16 pb-8', 'min-h-screen')}>
+    <section id='about' className='relative overflow-hidden snap-start'>
+      <div className={cn('flex flex-col gap-6', 'pt-14 pb-8', 'min-h-screen')}>
         <div className='relative z-10'>
           <Image
             src={profilePicture}

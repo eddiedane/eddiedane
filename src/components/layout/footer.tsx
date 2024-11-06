@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export default function Footer() {
   return (
-    <footer className='py-8 bg-stone-200 dark:bg-stone-900'>
+    <footer className='py-8 bg-stone-200 dark:bg-stone-900 snap-start'>
       <div className='relative'>
         <ul className='flex flex-col items-start gap-4 pl-5'>
           {navigation

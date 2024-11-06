@@ -7,7 +7,7 @@ export default function Intro() {
   const lastName = 'Dane';
 
   return (
-    <section id='intro' className='min-h-screen flex flex-col justify-center'>
+    <section id='intro' className='min-h-screen flex flex-col justify-center snap-start'>
       <div className='flex flex-col gap-8 -mb-24'>
         <h1
           id='names'

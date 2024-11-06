@@ -37,7 +37,7 @@ const OTHER = 'others';
 
 export default function Skills() {
   return (
-    <section id='skills' className='min-h-screen flex flex-col justify-center gap-6'>
+    <section id='skills' className='min-h-screen flex flex-col justify-center gap-6 snap-start'>
       <div className='container flex flex-col gap-2 text-center'>
         <h2 className='text-3xl font-extrabold tracking-tighter'>
           Building Blocks<span className='hidden'> of My Work</span>
