@@ -42,7 +42,14 @@ export default function Skills() {
       className='container min-h-screen flex flex-col justify-center items-center gap-6 snap-start'
     >
       <div className='px-5 flex flex-col items-center gap-2 text-center'>
-        <h2 className='text-3xl font-extrabold tracking-tighter'>
+        <h2
+          className={cn(
+            'font-extrabold tracking-tighter',
+            'xl:text-4xl md:text-3xl text-2xl',
+            'text-stone-800 dark:text-stone-100',
+            'text-center md:text-left',
+          )}
+        >
           Building Blocks<span className='hidden sm:inline'> of My Work</span>
         </h2>
         <p className='prose prose-sm prose-stone dark:prose-invert leading-tight tracking-tight md:max-w-[30em]'>
