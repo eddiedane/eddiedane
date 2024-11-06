@@ -9,15 +9,15 @@ import Footer from '@/components/layout/footer';
 export default function Home() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <main>
         <Intro />
-        <Projects /> */}
-      <Skills />
-      {/* <About />
-        <Education />
+        {/* <Projects /> */}
+        <Skills />
+        {/* <About /> */}
+        {/* <Education /> */}
       </main>
-      <Footer /> */}
+      {/* <Footer /> */}
     </>
   );
 }
