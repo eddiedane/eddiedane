@@ -48,7 +48,7 @@ export default function Drawer({ activeSection }: DrawerProps) {
         overlayClassName='backdrop-blur-lg bg-stone-100/60 dark:bg-stone-900/60'
         closeClassName='h-10 w-10'
       >
-        <ul className='flex flex-col justify-center items-end gap-8 text-4xl h-full text-stone-900 dark:text-stone-100'>
+        <ul className='flex flex-col justify-center items-end gap-8 text-4xl h-full w-full text-stone-900 dark:text-stone-100'>
           {navigation
             .filter(({ text }) => text.toLowerCase() !== 'intro')
             .map(({ text }, i) => (
@@ -66,7 +66,7 @@ export default function Drawer({ activeSection }: DrawerProps) {
             ))}
 
           <li className='w-full mt-10'>
-            {<Contacts showLabel={false} />}
+            <Contacts showLabel={false} className='justify-end gap-8' />
             <Link
               href='/contact'
               className={cn(
