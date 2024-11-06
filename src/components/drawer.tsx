@@ -14,22 +14,14 @@ import {
 } from '@/components/ui/sheet';
 import { BiSolidMessageDetail } from 'react-icons/bi';
 import { CgMenuRight } from 'react-icons/cg';
-import FragLink from '@/components/frag-link';
 import Contacts from '@/components/contacts';
-
+import { navigation } from '@/data';
 type DrawerProps = {
   activeSection?: string;
 };
 
 export default function Drawer({ activeSection }: DrawerProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const navigation = [
-    { text: 'Skills', href: '/#skills' },
-    { text: 'Projects', href: '/#projects' },
-    { text: 'Intro', href: '/#intro' },
-    { text: 'Education', href: '/#education' },
-    { text: 'About', href: '/#about' },
-  ];
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>

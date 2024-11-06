@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import Contacts from '@/components/contacts';
 import Message from '@/components/message';
 import profilePicture from '@/app/assets/images/profile.jpeg';

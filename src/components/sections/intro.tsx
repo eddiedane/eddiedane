@@ -43,7 +43,7 @@ export default function Intro() {
           <span className='container block'>Web Developer</span>
         </h2>
       </div>
-      <div className='h-80 relative top-20'>
+      <div className='h-96 relative top-20'>
         <Orbit />
       </div>
     </section>

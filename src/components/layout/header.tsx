@@ -9,8 +9,8 @@ export default function Header() {
   // const [activeSection, setActiveSection] = useState('Intro');
 
   return (
-    <header className='container fixed top-0 left-0 right-0 z-50 h-14 backdrop-blur-2xl bg-[#fafaf900] border-b'>
-      <nav className='h-full w-full flex items-center'>
+    <header className='fixed top-0 left-0 right-0 z-50 h-14 backdrop-blur-2xl bg-[#fafaf900] border-b'>
+      <nav className='container h-full w-full flex items-center'>
         <div className='w-full flex items-center justify-between'>
           <FragLink href='/#intro'>
             <Logo shuffle={false} />

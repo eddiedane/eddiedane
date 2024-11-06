@@ -34,6 +34,12 @@ pnpm install
 
 COPY . .
 
+ENV NODE_ENV=production
+
+RUN pnpm run build
+
+ENV NODE_ENV=development
+
 EXPOSE 3000
 
 CMD ["pnpm", "dev"]

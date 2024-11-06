@@ -33,15 +33,9 @@ export default function Orbit({ className = '' }) {
       className={cn('z-0', className)}
       shadows
       gl={{ antialias: true }}
-      // dpr={[1, 2]}
       camera={{ position: [65.5, 6.5, 25], fov: 4, near: 1, far: 200 }}
-      // style={{
-      //   width: '100vw', // Full viewport width
-      //   height: '100vh', // Full viewport height
-      // }}
+      id='orbit-canvas'
     >
-      {/* <CameraControls /> */}
-      {/* <OrbitControls /> */}
       <ambientLight />
       <ContactShadows
         position={[0, -1.5, 0]}
@@ -169,48 +163,6 @@ export default function Orbit({ className = '' }) {
     </Canvas>
   );
 }
-
-// function CameraControls() {
-//   const [camX, setCamX] = useState(65.5);
-//   const [camY, setCamY] = useState(6.5);
-//   const [camZ, setCamZ] = useState(25);
-//   const [fov, setFov] = useState(3.7);
-//   const { camera } = useThree();
-
-//   useEffect(() => {
-//     const PARAM = {
-//       x: camX,
-//       y: camY,
-//       z: camZ,
-//       fov: fov,
-//     };
-
-//     const pane = new Pane();
-
-//     pane.addBinding(PARAM, 'x', { min: -100, max: 100, step: 0.1 }).on('change', (ev) => {
-//       setCamX(ev.value);
-//     });
-
-//     pane.addBinding(PARAM, 'y', { min: -100, max: 100, step: 0.1 }).on('change', (ev) => {
-//       setCamY(ev.value);
-//     });
-
-//     pane.addBinding(PARAM, 'z', { min: -100, max: 100, step: 0.1 }).on('change', (ev) => {
-//       setCamZ(ev.value);
-//     });
-
-//     pane.addBinding(PARAM, 'fov', { min: -100, max: 100, step: 0.1 }).on('change', (ev) => {
-//       setFov(ev.value);
-//     });
-//   }, []);
-
-//   useFrame(() => {
-//     camera.fov = fov;
-//     camera.position.set(camX, camY, camZ);
-//     camera.lookAt(0, 0, 0);
-//     camera.updateProjectionMatrix();
-//   });
-// }
 
 const angleStep = (index, itemCount) => {
   return index * ((Math.PI * 2) / itemCount);
