@@ -7,8 +7,8 @@ import Message from '../message';
 
 export default function Footer() {
   return (
-    <footer className='py-8 bg-stone-200 dark:bg-stone-900 snap-start'>
-      <div className='relative'>
+    <footer className='py-8 bg-stone-200 dark:bg-stone-900 relative snap-start'>
+      <div className='container'>
         <ul className='relative z-30 flex flex-col items-start gap-4 pl-5 mb-10'>
           {navigation
             .sort((a, b) => (a.text === 'Intro' ? -1 : b.text.localeCompare(a.text)))
@@ -21,41 +21,51 @@ export default function Footer() {
               </li>
             ))}
         </ul>
-        <div className='absolute inset-0 z-10 flex flex-col justify-center items-end tracking-tight font-bold uppercase text-stone-400 dark:text-stone-700 pr-5'>
-          <span
-            className={cn(
-              'text-3xl',
-              'text-transparent',
-              'bg-clip-text',
-              'bg-gradient-to-br',
-              'from-stone-500 dark:from-stone-400',
-              'from-10%',
-              'to-stone-400 dark:to-stone-900',
-            )}
-          >
-            Efficient
-          </span>
-          <span className={cn('text-4xl')}>Simple</span>
-          <span
-            className={cn(
-              'text-3xl',
-              'text-transparent',
-              'bg-clip-text',
-              'bg-gradient-to-br',
-              'from-stone-400 dark:from-stone-900',
-              'to-stone-500 dark:to-stone-400',
-            )}
-          >
-            Versatile
-          </span>
-        </div>
-        <div className='absolute inset-0 z-20'>
-          <FooterArt />
-        </div>
       </div>
-      <div className={cn('flex gap-6 px-5')}>
-        <Contacts />
-        <Message />
+
+      <div className={cn('container relative z-50 flex sm:flex-col sm:items-start gap-6 px-5')}>
+        <Contacts className='sm:shrink sm:gap-3' />
+        <Message className='sm:shrink' />
+      </div>
+
+      <div
+        className={cn(
+          'absolute inset-0 z-0 -mt-28',
+          'flex flex-col justify-center items-end',
+          'tracking-tight font-bold uppercase',
+          'text-stone-400 dark:text-stone-700',
+          'pr-5',
+        )}
+      >
+        <span
+          className={cn(
+            'text-3xl md:text-6xl',
+            'text-transparent',
+            'bg-clip-text',
+            'bg-gradient-to-br',
+            'from-stone-500 dark:from-stone-400',
+            'from-10%',
+            'to-stone-400 dark:to-stone-900',
+          )}
+        >
+          Efficient
+        </span>
+        <span className={cn('text-4xl md:text-7xl')}>Simple</span>
+        <span
+          className={cn(
+            'text-3xl md:text-6xl',
+            'text-transparent',
+            'bg-clip-text',
+            'bg-gradient-to-br',
+            'from-stone-400 dark:from-stone-900',
+            'to-stone-500 dark:to-stone-400',
+          )}
+        >
+          Versatile
+        </span>
+      </div>
+      <div className='absolute inset-0 xl:inset-auto xl:right-0 xl:top-0 xl:w-1/2 xl:h-96 h-64 md:h-[25em] z-10'>
+        <FooterArt />
       </div>
 
       <div className='text-center text-sm text-stone-500 dark:text-stone-600 font-semibold mt-10'>

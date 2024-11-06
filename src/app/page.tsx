@@ -17,7 +17,7 @@ export default function Home() {
         <About />
         <Education />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
