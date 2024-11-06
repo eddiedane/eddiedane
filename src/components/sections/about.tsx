@@ -55,11 +55,6 @@ export default function About() {
               </p>
             </div>
           </div>
-          <hr className='my-6' />
-          <div className={cn('flex gap-6 px-5')}>
-            <Contacts showLabel={false} />
-            <Message />
-          </div>
         </div>
       </div>
     </section>

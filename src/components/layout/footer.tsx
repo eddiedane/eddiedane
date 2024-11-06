@@ -2,12 +2,14 @@ import { navigation } from '@/data';
 import Link from 'next/link';
 import FooterArt from '@/components/3d/footer-art';
 import { cn } from '@/lib/utils';
+import Contacts from '../contacts';
+import Message from '../message';
 
 export default function Footer() {
   return (
     <footer className='py-8 bg-stone-200 dark:bg-stone-900 snap-start'>
       <div className='relative'>
-        <ul className='relative z-30 flex flex-col items-start gap-4 pl-5'>
+        <ul className='relative z-30 flex flex-col items-start gap-4 pl-5 mb-10'>
           {navigation
             .sort((a, b) => (a.text === 'Intro' ? -1 : b.text.localeCompare(a.text)))
             .map((item) => (
@@ -18,7 +20,6 @@ export default function Footer() {
                 <Link href={item.href}>{item.text}</Link>
               </li>
             ))}
-          <li>{new Date().getFullYear()} Eddie Dane</li>
         </ul>
         <div className='absolute inset-0 z-10 flex flex-col justify-center items-end tracking-tight font-bold uppercase text-stone-400 dark:text-stone-700 pr-5'>
           <span
@@ -47,10 +48,18 @@ export default function Footer() {
           >
             Versatile
           </span>
-          <div className='absolute inset-0 z-20'>
-            <FooterArt />
-          </div>
         </div>
+        <div className='absolute inset-0 z-20'>
+          <FooterArt />
+        </div>
+      </div>
+      <div className={cn('flex gap-6 px-5')}>
+        <Contacts />
+        <Message />
+      </div>
+
+      <div className='text-center text-sm text-stone-500 dark:text-stone-600 font-semibold mt-10'>
+        {new Date().getFullYear()} Eddie Dane
       </div>
     </footer>
   );
