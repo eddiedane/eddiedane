@@ -9,7 +9,7 @@ export default function About() {
       id='about'
       className={cn(
         'min-h-screen snap-start',
-        'bg-stone-50 dark:bg-stone-800',
+        'bg-stone-200 dark:bg-stone-900',
         'relative overflow-hidden',
         'flex items-center justify-center',
       )}
@@ -35,7 +35,7 @@ export default function About() {
             'sm:px-0 px-5',
             'relative z-20',
             'bg-gradient-to-b from-transparent',
-            'via-stone-50 to-stone-100 dark:to-stone-800 dark:via-stone-700',
+            'via-stone-50 to-stone-200 dark:to-stone-900 dark:via-stone-700',
             'to-30% via-10%',
             'sm:bg-none',
             'max-w-xl',
@@ -45,7 +45,7 @@ export default function About() {
             className={cn(
               'font-extrabold tracking-tighter',
               'xl:text-4xl md:text-3xl text-2xl',
-              'text-stone-800 dark:text-stone-100',
+              'text-stone-800 dark:text-stone-200',
               'text-center md:text-left',
               'mb-4',
             )}

@@ -76,7 +76,7 @@ const trophies: Trophy[] = [
 
 export default function Education() {
   return (
-    <section id='education' className='bg-stone-100 dark:bg-stone-900 snap-start'>
+    <section id='education' className='bg-stone-100 dark:bg-stone-800 snap-start'>
       <div
         className={cn(
           'container min-h-screen',

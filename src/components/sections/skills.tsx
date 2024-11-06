@@ -39,9 +39,9 @@ export default function Skills() {
   return (
     <section
       id='skills'
-      className='container min-h-screen flex flex-col justify-center items-center gap-6 snap-start'
+      className='min-h-screen bg-stone-50 dark:bg-stone-800 flex flex-col justify-center items-center gap-6 snap-start'
     >
-      <div className='px-5 flex flex-col items-center gap-2 text-center'>
+      <div className='container px-5 flex flex-col items-center gap-2 text-center'>
         <h2
           className={cn(
             'font-extrabold tracking-tighter',
@@ -57,7 +57,7 @@ export default function Skills() {
           to different technologies and environments.
         </p>
       </div>
-      <div className='md:max-w-[36em] lg:max-w-[56em] xl:w-[64em] w-full'>
+      <div className='container md:max-w-[36em] lg:max-w-[56em] xl:w-[64em] w-full'>
         <div className='px-5 grid grid-cols-12 grid-rows-5 xl:grid-rows-4 gap-2 sm:gap-3 lg:gap-4 md:max-h-[24em] lg:max-h-max xl:max-h-[20em]'>
           <div className='skills-block col-span-6 sm:col-span-5 xl:col-span-4 row-span-2 xl:row-span-3 flex-col gap-1'>
             <Image

@@ -11,7 +11,10 @@ type ProjectCardProps = {
 
 export default function Projects() {
   return (
-    <section id='projects' className='min-h-screen flex flex-col justify-center gap-6 snap-start'>
+    <section
+      id='projects'
+      className='min-h-screen bg-stone-200 dark:bg-stone-900 flex flex-col justify-center gap-6 snap-start'
+    >
       <div className='container px-5 flex flex-col gap-2 text-center items-center'>
         <h2 className='font-extrabold xl:text-4xl md:text-3xl text-2xl tracking-tighter text-stone-800 dark:text-stone-100'>
           <span className='hidden'>From&nbsp;</span>Concepts to Reality
