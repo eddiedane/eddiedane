@@ -59,7 +59,6 @@ const config: Config = {
     },
     container: {
       center: true,
-      padding: '1rem',
     },
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],

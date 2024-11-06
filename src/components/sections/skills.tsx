@@ -39,9 +39,9 @@ export default function Skills() {
   return (
     <section
       id='skills'
-      className='min-h-screen flex flex-col justify-center items-center gap-6 snap-start'
+      className='container min-h-screen flex flex-col justify-center items-center gap-6 snap-start'
     >
-      <div className='container flex flex-col items-center gap-2 text-center'>
+      <div className='px-5 flex flex-col items-center gap-2 text-center'>
         <h2 className='text-3xl font-extrabold tracking-tighter'>
           Building Blocks<span className='hidden sm:inline'> of My Work</span>
         </h2>
@@ -50,8 +50,8 @@ export default function Skills() {
           to different technologies and environments.
         </p>
       </div>
-      <div className='md:w-[36em] lg:w-[56em] xl:w-[64em]'>
-        <div className='container grid grid-cols-12 grid-rows-5 xl:grid-rows-4 gap-2 sm:gap-3 lg:gap-4 md:max-h-[24em] lg:max-h-max xl:max-h-[20em]'>
+      <div className='md:max-w-[36em] lg:max-w-[56em] xl:w-[64em] w-full'>
+        <div className='px-5 grid grid-cols-12 grid-rows-5 xl:grid-rows-4 gap-2 sm:gap-3 lg:gap-4 md:max-h-[24em] lg:max-h-max xl:max-h-[20em]'>
           <div className='skills-block col-span-6 sm:col-span-5 xl:col-span-4 row-span-2 xl:row-span-3 flex-col gap-1'>
             <Image
               src={goLogo}
@@ -147,7 +147,7 @@ export default function Skills() {
         </div>
         <div>
           <Tabs defaultValue={BACKEND} className='mt-2'>
-            <TabsList className='bg-transparent gap-4 p-0 m-0 overflow-x-auto scrollbar-hidden px-4 w-full justify-start'>
+            <TabsList className='bg-transparent gap-4 p-0 m-0 overflow-x-auto scrollbar-hidden px-5 w-full justify-start'>
               {getAllCategories().map((category) => (
                 <TabsTrigger
                   key={category}
@@ -166,7 +166,7 @@ export default function Skills() {
 
             {getAllCategories().map((category) => (
               <TabsContent key={category} value={category} className='m-0'>
-                <ul className='inline-flex gap-5 overflow-x-auto px-4 scrollbar-hidden w-full'>
+                <ul className='inline-flex gap-5 overflow-x-auto px-5 scrollbar-hidden w-full'>
                   {getSkills()
                     .filter((skill) => skill.categories.includes(category))
                     .map((skill) => (
