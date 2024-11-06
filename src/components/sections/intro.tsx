@@ -38,6 +38,7 @@ export default function Intro() {
           className={cn(
             'bg-orange-500',
             'text-stone-950 text-2xl tracking-widest font-bold uppercase',
+            'py-2',
           )}
         >
           <span className='container block'>Web Developer</span>

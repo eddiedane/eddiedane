@@ -1,5 +1,5 @@
 import { navigation } from '@/data';
-import FragLink from '../frag-link';
+import Link from 'next/link';
 import FooterArt from '@/components/3d/footer-art';
 import { cn } from '@/lib/utils';
 
@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className='py-8 bg-stone-200 dark:bg-stone-900 snap-start'>
       <div className='relative'>
-        <ul className='flex flex-col items-start gap-4 pl-5'>
+        <ul className='relative z-30 flex flex-col items-start gap-4 pl-5'>
           {navigation
             .sort((a, b) => (a.text === 'Intro' ? -1 : b.text.localeCompare(a.text)))
             .map((item) => (
@@ -15,7 +15,7 @@ export default function Footer() {
                 key={item.href}
                 className='text-xl text-stone-800 dark:text-stone-200 font-semibold'
               >
-                <FragLink href={item.href}>{item.text}</FragLink>
+                <Link href={item.href}>{item.text}</Link>
               </li>
             ))}
           <li>{new Date().getFullYear()} Eddie Dane</li>

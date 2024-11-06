@@ -56,7 +56,7 @@ const trophiesData: Trophy[] = [
 
 export default function Education() {
   return (
-    <section className='min-h-screen flex flex-col justify-center snap-start'>
+    <section id='education' className='min-h-screen flex flex-col justify-center snap-start'>
       <div className='flex flex-col items-center gap-6'>
         <h2 className='text-3xl font-extrabold tracking-tighter text-center px-5'>
           <span className='hidden'>My Journey of </span>Growth & Knowledge
@@ -85,7 +85,7 @@ export default function Education() {
                   src={image}
                   key={name}
                   alt={name + ' certificate'}
-                  className='max-w-40 border'
+                  className='max-w-48 border'
                 />
                 <span className='text-sm font-semibold text-stone-400 dark:text-stone-300 hover:underline underline-offset-2'>
                   {name}

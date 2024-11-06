@@ -64,7 +64,7 @@ export default function FragLink({
 
 function resolveFragment(hash: string | undefined, href: any): { href: any; hash: string } {
   let hrefHash: string = '';
-  const hashRegex = /#(?:\w|-)+/;
+  const hashRegex = /#((?:\w|-)+)/;
 
   if (typeof href === 'string') {
     const match = href.match(hashRegex);
