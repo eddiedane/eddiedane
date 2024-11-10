@@ -10,6 +10,7 @@ import Message from '../message';
 
 export default function Footer() {
   const pathname = usePathname();
+  const navs = navigation.sort((a) => (a.text === 'Intro' ? -1 : 0));
 
   return (
     <footer
@@ -19,16 +20,21 @@ export default function Footer() {
     >
       <div className='container'>
         <ul className='relative z-30 flex flex-col items-start gap-4 pl-5 mb-10'>
-          {navigation
-            .sort((a, b) => (a.text === 'Intro' ? -1 : b.text.localeCompare(a.text)))
-            .map((item) => (
-              <li
-                key={item.href}
-                className='text-xl text-stone-800 dark:text-stone-200 font-semibold'
+          {navs.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                prefetch={true}
+                className={cn(
+                  'text-xl text-stone-500 hover:text-stone-800 dark:text-stone-400 hover:dark:text-stone-200',
+                  'font-semibold',
+                  'hover:underline underline-offset-4 decoration-orange-600 decoration-double',
+                )}
               >
-                <Link href={item.href}>{item.text}</Link>
-              </li>
-            ))}
+                {item.text}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
