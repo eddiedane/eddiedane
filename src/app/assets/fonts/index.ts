@@ -16,6 +16,11 @@ export const chakraPetch = Chakra_Petch({
   weight: ['300', '400', '500', '600', '700'],
 });
 
+export const reey = localFont({
+  src: './reey/reey-regular.woff',
+  weight: '400',
+});
+
 export const metropolis = localFont({
   src: [
     { path: './metropolis/metropolis-thin.woff', weight: '100' },

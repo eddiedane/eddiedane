@@ -2,6 +2,7 @@ import Image from 'next/image';
 import profilePicture from '@/app/assets/images/profile.jpeg';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { reey } from '@/app/assets/fonts';
 
 export default function About() {
   return (
@@ -22,6 +23,17 @@ export default function About() {
         )}
       >
         <div className='relative z-10 md:hidden'>
+          <div
+            className={cn(
+              'absolute top-4 right-4',
+              'text-orange-100 text-2xl',
+              'flex flex-col',
+              reey.className,
+            )}
+          >
+            <span>Eddie</span>
+            <span>Dane</span>
+          </div>
           <Image
             src={profilePicture}
             alt="Eddie Dane's Portrait"
@@ -80,12 +92,30 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className='hidden md:block self-start'>
+        <div className='relative hidden md:block self-start'>
+          <span
+            className={cn(
+              'absolute top-0 left-0',
+              'text-stone-800 dark:text-stone-200 text-2xl',
+              reey.className,
+            )}
+          >
+            Eddie
+          </span>
           <Image
             src={profilePicture}
             alt="Eddie Dane's Portrait"
             className={cn('xl:max-w-52 max-w-60', 'rounded-e-full')}
           />
+          <span
+            className={cn(
+              'absolute bottom-0 right-0',
+              'text-6xl text-stone-800 dark:text-stone-200',
+              reey.className,
+            )}
+          >
+            <span className='hidden'>D</span>ane
+          </span>
         </div>
       </div>
     </section>

@@ -177,7 +177,7 @@ export default function Education() {
             className={cn(
               'flex flex-nowrap items-end',
               'gap-8',
-              'overflow-x-auto scrollbar-hidden',
+              'overflow-x-auto overflow-y-hidden scrollbar-hidden',
               'w-full',
               'lg:px-0 sm:px-10 px-5',
             )}
