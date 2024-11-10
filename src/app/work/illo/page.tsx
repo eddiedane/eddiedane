@@ -6,6 +6,7 @@ import orders from '@/app/assets/images/illo/orders.jpg';
 import productListing from '@/app/assets/images/illo/product-listing.jpg';
 import stores from '@/app/assets/images/illo/stores.jpg';
 import illoLogo from '@/app/assets/images/illo/logo.svg';
+import ProjectInfo from '@/components/project-info';
 
 type Info = {
   type: string;
@@ -57,6 +58,7 @@ const info: Info[] = [
 export default function IlloPage() {
   return (
     <main
+      id='projects'
       className={cn(
         'pt-28 bg-stone-100 dark:bg-stone-900 min-h-52',
         'flex flex-col items-center gap-12',
@@ -102,19 +104,8 @@ export default function IlloPage() {
             and working solutions in one <em className='text-orange-600'>premium</em> platform,
             hence illo was born.
           </p>
-          <ul
-            className={cn(
-              'self-start flex lg:flex-col lg:gap-6 gap-8 flex-nowrap lg:shrink',
-              'lg:overflow-x-visible overflow-x-auto scrollbar-hidden',
-              'lg:max-w-60 max-w-full',
-              'px-5 sm:px-10 lg:px-0',
-              'select-none',
-            )}
-          >
-            {info.map(({ type, value }, i) => (
-              <InfoItem key={i} type={type} value={value} />
-            ))}
-          </ul>
+
+          <ProjectInfo info={info} />
         </div>
 
         <div
@@ -199,47 +190,6 @@ export default function IlloPage() {
         </div>
       </div>
     </main>
-  );
-}
-
-function InfoItem({ type, value }: Info) {
-  return (
-    <li
-      tabIndex={0}
-      className={cn(
-        'flex flex-col tracking-wide',
-        'text-stone-500 hover:text-inherit focus:text-inherit',
-        'transition-all duration-300 lg:duration-500 lg:delay-75',
-        'lg:translate-x-0 lg:hover:translate-x-7 lg:focus:translate-x-7',
-        'lg:scale-100 lg:hover:scale-x-110 lg:focus:scale-110',
-        'w-full',
-      )}
-    >
-      <strong className='capitalize text-lg font-black text-50'>{type}</strong>
-      <InfoValue value={value} />
-    </li>
-  );
-}
-
-function InfoValue({ value }: { value: string | string[] | React.ReactElement }) {
-  return Array.isArray(value) ? (
-    <InfoListValue value={value} />
-  ) : typeof value === 'string' ? (
-    <small className='tracking-widest'>{value}</small>
-  ) : (
-    value
-  );
-}
-
-function InfoListValue({ value }: { value: string[] }) {
-  return (
-    <ul>
-      {value.map((text, i) => (
-        <li key={i}>
-          <small>{text}</small>
-        </li>
-      ))}
-    </ul>
   );
 }
 

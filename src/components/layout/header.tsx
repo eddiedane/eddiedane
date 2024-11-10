@@ -18,6 +18,7 @@ export default function Header() {
             <li key={i} className='flex'>
               <FragLink
                 href={href}
+                strict={false}
                 onIntersecting={({ name }) => setActiveSection(name)}
                 className={cn(
                   'nav-item',

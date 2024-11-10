@@ -8,6 +8,7 @@ interface FragLinkProps
   extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'href'>,
     Partial<LinkProps> {
   name?: string;
+  strict?: boolean;
   children?: React.ReactNode;
   onIntersecting?: (eventObject: OnIntersectingEventObject) => void;
   className?: string;
@@ -19,6 +20,7 @@ type OnIntersectingEventObject = {
 
 export default function FragLink({
   name = '',
+  strict = true,
   href,
   onIntersecting,
   children,
@@ -31,7 +33,7 @@ export default function FragLink({
   useEffect(() => {
     if (!linkRef.current) return;
 
-    if (linkRef.current.pathname !== pathname) {
+    if (strict && linkRef.current.pathname !== pathname) {
       onIntersecting?.({ name: '' });
     }
 

@@ -90,8 +90,9 @@ function IlloProjectCard({ size = 72 }: ProjectCardProps) {
 
 function RakeProjectCard({ size = 72 }: ProjectCardProps) {
   return (
-    <a
-      href='#'
+    <Link
+      href='/project/rake'
+      prefetch={true}
       className={cn('block', 'rounded-lg overflow-hidden', 'border-4 border-green-600', {
         'min-w-72 max-w-72': size === 72,
         'min-w-64 max-w-64': size === 64,
@@ -113,10 +114,10 @@ function RakeProjectCard({ size = 72 }: ProjectCardProps) {
         <h3 className='inline font-semibold text-2xl'>Rake&nbsp;</h3>
         <p className='inline'>Configuration base CLI tool for automation and web scraping.</p>
         <p className='text-xs font-extrabold text-stone-500 mt-3 lowercase smallcaps text-right'>
-          <span className='text-sm'>Personal project</span> <br />{' '}
-          <span className='text-green-700'>actively maintained</span>
+          <span className='text-sm'>Open source</span> <br />{' '}
+          <span className='text-sky-700 text-sm'>PyPI package</span>
         </p>
       </div>
-    </a>
+    </Link>
   );
 }
