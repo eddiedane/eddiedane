@@ -24,6 +24,7 @@ export default function Header() {
                   'nav-item',
                   'md:py-4 sm:px-4 sm:py-3 py-2 px-2',
                   'text-stone-700 dark:text-stone-400 font-semibold md:text-xl sm:text-lg text-base smallcaps',
+                  'hover:underline underline-offset-4 decoration-orange-600 decoration-double',
                   'transition-all duration-100',
                   {
                     'scale-125 text-stone-900 dark:text-stone-100 font-black':

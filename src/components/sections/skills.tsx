@@ -84,7 +84,7 @@ export default function Skills() {
           <div className='skills-block col-span-4 sm:col-span-3 xl:col-span-2 row-span-1 flex justify-center items-center'>
             <span
               className={cn(
-                'text-3xl sm:text-4xl',
+                'text-3xl sm:text-4xl xl:text-3xl',
                 'font-semibold',
                 'text-stone-950',
                 'tracking-widest',

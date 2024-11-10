@@ -55,9 +55,14 @@ export default function Drawer({ activeSection }: DrawerProps) {
               <li key={i} className='lowercase smallcaps font-extrabold'>
                 <Link
                   href={`/#${text.toLowerCase()}`}
-                  className={cn('block active:scale-95 border-b-4', {
-                    'border-orange-300': activeSection?.toLowerCase() === text.toLowerCase(),
-                  })}
+                  className={cn(
+                    'block active:scale-95',
+                    'underline underline-offset-4 decoration-neutral-300',
+                    {
+                      'decoration-orange-600 decoration-double':
+                        activeSection?.toLowerCase() === text.toLowerCase(),
+                    },
+                  )}
                   onClick={() => setIsOpen(false)}
                 >
                   {text}
