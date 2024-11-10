@@ -48,6 +48,7 @@ function IlloProjectCard({ size = 72 }: ProjectCardProps) {
   return (
     <Link
       href='/work/illo'
+      prefetch={true}
       className={cn('block', 'rounded-lg overflow-hidden', 'border-4 border-stone-700', {
         'min-w-72 max-w-72': size === 72,
         'min-w-64 max-w-64': size === 64,
@@ -58,9 +59,15 @@ function IlloProjectCard({ size = 72 }: ProjectCardProps) {
         aria-label='illo logo overlaying the order analytics page'
         className='flex items-center relative'
       >
-        <Image src={illoAnalyticsCropped} alt='illo orders analytics page' />
+        <Image src={illoAnalyticsCropped} alt='illo orders analytics page' loading='eager' />
         <div className='absolute inset-0 flex items-center justify-center bg-stone-50/50 backdrop-blur-[1.5px]'>
-          <Image src={illoLogo} alt='illo logo' draggable={false} className='w-16 h-auto' />
+          <Image
+            src={illoLogo}
+            alt='illo logo'
+            draggable={false}
+            className='w-16 h-auto'
+            loading='eager'
+          />
           <span className='text-7xl font-semibold dark:text-stone-950'>illo</span>
         </div>
       </div>
@@ -95,7 +102,7 @@ function RakeProjectCard({ size = 72 }: ProjectCardProps) {
         aria-label='illo logo overlaying the order analytics page'
         className='flex items-center relative'
       >
-        <Image src={rakeConfig} alt='rake cli sample configuration file' />
+        <Image src={rakeConfig} alt='rake cli sample configuration file' loading='eager' />
         <div className='absolute inset-0 flex items-center justify-center bg-stone-950/50 backdrop-blur-[1.5px]'>
           <span className={cn(chakraPetch.className, 'text-7xl font-semibold text-green-600')}>
             rake

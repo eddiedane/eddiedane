@@ -10,7 +10,7 @@ import Message from '../message';
 
 export default function Footer() {
   const pathname = usePathname();
-  const navs = navigation.sort((a) => (a.text === 'Intro' ? -1 : 0));
+  const navs = [...navigation].sort((a) => (a.text === 'Intro' ? -1 : 0));
 
   return (
     <footer
