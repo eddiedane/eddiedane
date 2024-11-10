@@ -1,5 +1,6 @@
 @import './components.css';
 @import './utilities.css';
+@import './squares.css';
 
 @tailwind base;
 

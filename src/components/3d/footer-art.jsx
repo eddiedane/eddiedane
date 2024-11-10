@@ -15,7 +15,7 @@ export default function FooterArt({ className = '' }) {
     >
       <ambientLight intensity={1.5} />
       <Float speed={2} rotationIntensity={1} floatIntensity={0.5} rotation={[0, -0.3, 0]}>
-        <Model src='/3d/gopher/scene2.gltf' position={[-6, 0.15, 0]} />
+        <Model src='/3d/gopher/scene2.gltf' position={[-6, 0.1, 0]} />
       </Float>
     </Canvas>
   );

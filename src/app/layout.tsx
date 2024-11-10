@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
-import './assets/styles/globals.css';
-import { metropolis } from './assets/fonts';
+import '@/app/assets/styles/globals.css';
+import { metropolis } from '@/app/assets/fonts';
 import { cn } from '@/lib/utils';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   title: 'Eddie Dane — Web Developer',
@@ -38,7 +40,9 @@ export default function RootLayout({
         )}
       >
         <div className='max-h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth'>
+          <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

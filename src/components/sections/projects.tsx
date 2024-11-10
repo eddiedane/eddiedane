@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { chakraPetch } from '@/app/assets/fonts';
+import Link from 'next/link';
 import illoLogo from '@/app/assets/images/illo/logo.svg';
 import illoAnalyticsCropped from '@/app/assets/images/illo/analytics-orders-mini.jpg';
 import rakeConfig from '@/app/assets/images/rake/rake-config.png';
@@ -45,8 +46,8 @@ export default function Projects() {
 
 function IlloProjectCard({ size = 72 }: ProjectCardProps) {
   return (
-    <a
-      href='#'
+    <Link
+      href='/work/illo'
       className={cn('block', 'rounded-lg overflow-hidden', 'border-4 border-stone-700', {
         'min-w-72 max-w-72': size === 72,
         'min-w-64 max-w-64': size === 64,
@@ -76,7 +77,7 @@ function IlloProjectCard({ size = 72 }: ProjectCardProps) {
           <br /> 2021 - 2023
         </p>
       </div>
-    </a>
+    </Link>
   );
 }
 

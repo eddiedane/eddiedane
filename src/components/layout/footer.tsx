@@ -1,4 +1,7 @@
+'use client';
+
 import { navigation } from '@/data';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import FooterArt from '@/components/3d/footer-art';
 import { cn } from '@/lib/utils';
@@ -6,8 +9,14 @@ import Contacts from '../contacts';
 import Message from '../message';
 
 export default function Footer() {
+  const pathname = usePathname();
+
   return (
-    <footer className='py-8 bg-stone-200 dark:bg-stone-900 relative snap-start'>
+    <footer
+      className={cn('py-8', 'bg-stone-200 dark:bg-stone-900', 'relative', {
+        'snap-start': pathname == '/',
+      })}
+    >
       <div className='container'>
         <ul className='relative z-30 flex flex-col items-start gap-4 pl-5 mb-10'>
           {navigation
