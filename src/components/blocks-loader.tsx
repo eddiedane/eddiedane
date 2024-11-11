@@ -5,7 +5,7 @@ type BlocksProps = {
   color?: string;
 };
 
-export default function Blocks({ className, color }: BlocksProps) {
+export default function BlocksLoader({ className, color }: BlocksProps) {
   return (
     <svg
       width='24'

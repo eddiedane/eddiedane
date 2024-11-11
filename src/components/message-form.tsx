@@ -19,8 +19,9 @@ import { ToastAction } from '@radix-ui/react-toast';
 import { fromBase64Url } from '@/lib/base64';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import Blocks from '@/components/blocks-loader';
+import BlocksLoader from '@/components/blocks-loader';
 import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 type MessageFormProps = {
   onLoading?: (state: boolean) => void;
@@ -99,10 +100,17 @@ export default function MessageForm({
   const [loading, setLoading] = useState(false);
   const [valid, setValid] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
   const { toast } = useToast();
   const form = useForm<z.infer<typeof messageFormSchema>>({
     resolver: zodResolver(messageFormSchema),
-    defaultValues: { name: '', company: '', email: '', subject: '', message: '' },
+    defaultValues: {
+      name: '',
+      company: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
     mode: 'onChange',
   });
 
@@ -138,17 +146,23 @@ export default function MessageForm({
 
       if (res.ok) {
         toast({
-          variant: 'success',
+          variant: 'default',
           title: 'Message sent successfully!',
           description:
             'Thanks for taking the time to reach out, I will get back to you soon, if need be.',
         });
 
+        console.log('Hello...');
+
         if (onComplete) onComplete();
+
         form.reset();
-        setTimeout(() => {
-          router.push('/');
-        }, 1000);
+
+        if (pathname !== '/') {
+          setTimeout(() => {
+            router.push('/');
+          }, 1000);
+        }
       }
 
       if (res.status === 400) {
@@ -251,7 +265,7 @@ export default function MessageForm({
             'flex justify-center items-center self-center',
           )}
         >
-          {!loading ? <span>Send my message</span> : <Blocks color='white' />}
+          {!loading ? <span>Send my message</span> : <BlocksLoader color='white' />}
         </Button>
       </form>
     </Form>

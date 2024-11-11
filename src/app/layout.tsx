@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import '@/app/assets/styles/globals.css';
 import { metropolis } from '@/app/assets/fonts';
 import { cn } from '@/lib/utils';
+import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
@@ -44,6 +45,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <Toaster />
       </body>
     </html>
   );

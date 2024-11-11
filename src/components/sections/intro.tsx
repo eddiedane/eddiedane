@@ -81,16 +81,6 @@ export default function Intro() {
         <div className='lg:h-[65%] md:h-5/6 h-4/5 lg:self-center self-start lg:col-span-7 col-span-12'>
           <Orbit />
         </div>
-        {/* <ContactLinks
-          className={cn(
-            'intro-item',
-            'lg:hidden',
-            'items-center sm:justify-around',
-            'absolute bottom-0 left-0 right-0',
-            'px-5 py-6',
-          )}
-          showLabel={false}
-        /> */}
       </div>
     </section>
   );
