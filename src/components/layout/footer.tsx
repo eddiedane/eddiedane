@@ -13,9 +13,9 @@ export default function Footer() {
   const navs = [...navigation].sort((a) => (a.text === 'Intro' ? -1 : 0));
 
   return (
-    <footer
+    <div
       className={cn('py-8', 'bg-stone-200 dark:bg-stone-900', 'relative', {
-        'snap-start': pathname == '/',
+        'snap-center': pathname == '/',
       })}
     >
       <div className='container'>
@@ -86,6 +86,6 @@ export default function Footer() {
       <div className='text-center text-sm text-stone-500 dark:text-stone-600 font-semibold mt-10'>
         {new Date().getFullYear()} Eddie Dane
       </div>
-    </footer>
+    </div>
   );
 }

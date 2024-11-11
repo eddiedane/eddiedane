@@ -39,7 +39,7 @@ export default function Skills() {
   return (
     <section
       id='skills'
-      className='min-h-screen bg-stone-50 dark:bg-stone-800 flex flex-col justify-center items-center gap-6 snap-start'
+      className='min-h-screen bg-stone-50 dark:bg-stone-800 flex flex-col justify-center items-center gap-6 snap-center'
     >
       <div className='container px-5 flex flex-col items-center gap-2 text-center'>
         <h2

@@ -4,7 +4,6 @@ import { metropolis } from '@/app/assets/fonts';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   title: 'Eddie Dane — Web Developer',
@@ -43,7 +42,6 @@ export default function RootLayout({
         <div className='max-h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth'>
           <Header />
           {children}
-          <Footer />
         </div>
         <Toaster />
       </body>
