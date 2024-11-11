@@ -57,8 +57,8 @@ export default function Skills() {
           to different technologies and environments.
         </p>
       </div>
-      <div className='container md:max-w-[36em] lg:max-w-[56em] xl:w-[64em] w-full'>
-        <div className='px-5 grid grid-cols-12 grid-rows-5 xl:grid-rows-4 gap-2 sm:gap-3 lg:gap-4 md:max-h-[24em] lg:max-h-max xl:max-h-[20em]'>
+      <div className='container md:!max-w-[36em] lg:!max-w-[56em] xl:!max-w-[64em] w-full'>
+        <div className='px-5 grid grid-cols-12 grid-rows-5 xl:grid-rows-4 gap-2 sm:gap-3 lg:gap-4 md:!max-h-[24em] lg:!max-h-max xl:!max-h-[20em]'>
           <div className='skills-block col-span-6 sm:col-span-5 xl:col-span-4 row-span-2 xl:row-span-3 flex-col gap-1'>
             <Image
               src={goLogo}
