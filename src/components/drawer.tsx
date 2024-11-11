@@ -23,6 +23,8 @@ type DrawerProps = {
 export default function Drawer({ activeSection }: DrawerProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleClose = () => setIsOpen(false);
+
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
@@ -63,7 +65,7 @@ export default function Drawer({ activeSection }: DrawerProps) {
                         activeSection?.toLowerCase() === text.toLowerCase(),
                     },
                   )}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleClose}
                 >
                   {text}
                 </Link>
@@ -73,6 +75,7 @@ export default function Drawer({ activeSection }: DrawerProps) {
           <li className='w-full mt-10'>
             <Contacts showLabel={false} className='justify-end gap-8' />
             <Link
+              onClick={handleClose}
               href='/contact'
               className={cn(
                 'cta-btn',
