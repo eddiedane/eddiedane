@@ -8,7 +8,6 @@ export default function Loading() {
         'eddn-loader',
         'absolute z-[999] inset-0',
         'flex flex-col justify-center items-center',
-        'text-stone-800 dark:text-stone-200',
         'bg-gradient-to-br from-stone-50 to-stone-400',
         'dark:bg-gradient-to-br dark:from-stone-800 dark:via-stone-900 dark:to-stone-900',
       )}
@@ -17,9 +16,7 @@ export default function Loading() {
         className='text-[clamp(4em,13vmin,6em)] leading-[0.8em] tracking-tighter font-thin'
         shuffle
       />
-      <p className='prose prose-lg text-stone-600 dark:text-stone-400 leading-normal tracking-normal mt-3'>
-        {getGreeting()}
-      </p>
+      <p className='text-stone-500 leading-normal tracking-normal mt-3'>{getGreeting()}</p>
     </div>
   );
 }

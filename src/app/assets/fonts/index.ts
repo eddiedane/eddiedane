@@ -1,19 +1,18 @@
 import localFont from 'next/font/local';
-import { Major_Mono_Display, Notable, Chakra_Petch } from 'next/font/google';
 
-export const majorMonoDisplay = Major_Mono_Display({
-  subsets: ['latin'],
+export const majorMonoDisplay = localFont({
+  src: './MajorMonoDisplay/MajorMonoDisplay-Regular.ttf',
   weight: '400',
 });
 
-export const notable = Notable({
-  subsets: ['latin'],
+export const notable = localFont({
+  src: './Notable/Notable-Regular.ttf',
   weight: '400',
 });
 
-export const chakraPetch = Chakra_Petch({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+export const chakraPetch = localFont({
+  src: './ChakraPetch/ChakraPetch-Regular.ttf',
+  weight: '300 400 500 600 700',
 });
 
 export const reey = localFont({
