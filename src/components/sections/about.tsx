@@ -3,6 +3,8 @@ import profilePicture from '@/app/assets/images/profile.jpeg';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { reey } from '@/app/assets/fonts';
+import { FaLocationDot } from 'react-icons/fa6';
+import { FaCode } from 'react-icons/fa';
 
 export default function About() {
   return (
@@ -22,7 +24,7 @@ export default function About() {
           'sm:px-5 md:pt-0 sm:pt-24 pt-16 pb-8',
         )}
       >
-        <div className='relative z-10 md:hidden'>
+        <div className='relative z-10 sm:hidden'>
           <div
             className={cn(
               'absolute top-4 right-4',
@@ -37,7 +39,7 @@ export default function About() {
           <Image
             src={profilePicture}
             alt="Eddie Dane's Portrait"
-            className='abt-img xl:max-w-sm lg:max-w-xs sm:max-w-60 sm:rounded-full max-w-full'
+            className='abt-img xl:max-w-sm lg:max-w-xs max-w-full'
           />
         </div>
         <div
@@ -59,16 +61,28 @@ export default function About() {
               'xl:text-4xl md:text-3xl text-2xl',
               'text-stone-800 dark:text-stone-200',
               'text-center md:text-left',
-              'mb-4',
+              'mb-1',
             )}
           >
-            The Person Behind the Craft
+            The Guy Behind the Code
           </h2>
+
+          <div className='flex justify-center md:justify-start items-center gap-4 mb-4 text-stone-600 dark:text-stone-300'>
+            <span className='flex items-center gap-1 text-xs'>
+              <FaLocationDot />
+              <span className='font-semibold uppercase smallcaps'>Nigeria</span>
+            </span>
+            <span className='flex items-center gap-1 text-xs'>
+              <FaCode />
+              <span className='font-semibold uppercase smallcaps'>5+ years</span>
+            </span>
+          </div>
+
           <div>
             <p className='prose-base flex flex-col gap-2 text-justify md:text-left'>
               <em className='font-black text-lg'>
-                A web developer, dedicated to building user-friendly, efficient and scalable web
-                applications, with over 5 years of experience.&nbsp;
+                Bringing solutions to the web for over five years now, with accessible,
+                user-friendly, efficient and scalable applications.&nbsp;
                 <Link
                   href='#'
                   className={cn(
@@ -92,7 +106,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className='relative hidden md:block self-start'>
+        <div className='relative hidden sm:block self-start'>
           <span
             className={cn(
               'absolute top-0 left-0',
@@ -105,7 +119,7 @@ export default function About() {
           <Image
             src={profilePicture}
             alt="Eddie Dane's Portrait"
-            className={cn('xl:max-w-52 max-w-60', 'rounded-e-full')}
+            className={cn('xl:max-w-52 sm:max-w-52 max-w-60', 'rounded-e-full')}
           />
           <span
             className={cn(
