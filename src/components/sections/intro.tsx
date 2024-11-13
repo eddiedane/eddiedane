@@ -9,7 +9,10 @@ export default function Intro() {
   const lastName = 'Dane';
 
   return (
-    <section id='intro' className='bg-stone-50 dark:bg-stone-800 min-h-screen snap-center'>
+    <section
+      id='intro'
+      className='bg-stone-50 dark:bg-stone-800 min-h-screen snap-center snap-always'
+    >
       <div className='container min-h-screen grid grid-cols-12 xl:px-0 lg:px-20'>
         <div
           className={cn(

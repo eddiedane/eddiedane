@@ -12,12 +12,10 @@ import reactLogo from '@/app/assets/images/skills/react.svg';
 import goLogo from '@/app/assets/images/skills/go.svg';
 import nodeLogo from '@/app/assets/images/skills/node.svg';
 import pythonLogo from '@/app/assets/images/skills/python.svg';
-import grpcLogo from '@/app/assets/images/skills/grpc.svg';
 import gitLogo from '@/app/assets/images/skills/git.svg';
 import kubernetesLogo from '@/app/assets/images/skills/kubernetes.svg';
 import dockerLogo from '@/app/assets/images/skills/docker.svg';
 import awsLogo from '@/app/assets/images/skills/aws.svg';
-import figmaLogo from '@/app/assets/images/skills/figma.svg';
 
 type Skill = {
   name: string;
@@ -27,6 +25,7 @@ type Skill = {
   strong?: 1 | 2 | 3 | 4 | 5;
 };
 
+const ALL = 'over the years';
 const FRONTEND = 'frontend';
 const BACKEND = 'backend';
 const FULLSTACK = 'fullstack';
@@ -39,7 +38,13 @@ export default function Skills() {
   return (
     <section
       id='skills'
-      className='min-h-screen bg-stone-50 dark:bg-stone-800 flex flex-col justify-center items-center gap-6 snap-center'
+      className={cn(
+        'min-h-screen',
+        'bg-stone-50 dark:bg-stone-800',
+        'flex flex-col justify-center items-center',
+        'gap-6',
+        'snap-center snap-always',
+      )}
     >
       <div className='container px-5 flex flex-col items-center gap-2 text-center'>
         <h2
@@ -57,8 +62,8 @@ export default function Skills() {
           to different technologies and environments.
         </p>
       </div>
-      <div className='container md:!max-w-[36em] lg:!max-w-[56em] xl:!max-w-[64em] w-full'>
-        <div className='px-5 grid grid-cols-12 grid-rows-5 xl:grid-rows-4 gap-2 sm:gap-3 lg:gap-4 md:!max-h-[24em] lg:!max-h-max xl:!max-h-[20em]'>
+      <div className='container md:!max-w-[36em] lg:!max-w-[56em] xl:!max-w-[62em] w-full'>
+        <div className='px-5 md:px-0 grid grid-cols-12 grid-rows-5 xl:grid-rows-4 gap-2 sm:gap-3 lg:gap-4 md:!max-h-[24em] lg:!max-h-max xl:!max-h-[20em]'>
           <div className='skills-block col-span-6 sm:col-span-5 xl:col-span-4 row-span-2 xl:row-span-3 flex-col gap-1'>
             <Image
               src={goLogo}
@@ -154,7 +159,7 @@ export default function Skills() {
         </div>
         <div>
           <Tabs defaultValue={BACKEND} className='mt-2'>
-            <TabsList className='bg-transparent gap-4 p-0 m-0 overflow-x-auto scrollbar-hidden px-5 w-full justify-start'>
+            <TabsList className='bg-transparent gap-4 p-0 m-0 overflow-x-auto scrollbar-hidden px-5 md:px-0 w-full justify-start'>
               {getAllCategories().map((category) => (
                 <TabsTrigger
                   key={category}
@@ -162,7 +167,7 @@ export default function Skills() {
                   className={cn(
                     'p-0',
                     'font-semibold',
-                    'data-[state=active]:shadow-none',
+                    'data-[state=active]:shadow-none data-[state=active]:bg-transparent',
                     'text-stone-400 data-[state=active]:text-stone-900 dark:data-[state=active]:text-stone-300',
                   )}
                 >
@@ -173,7 +178,7 @@ export default function Skills() {
 
             {getAllCategories().map((category) => (
               <TabsContent key={category} value={category} className='m-0'>
-                <ul className='inline-flex gap-5 overflow-x-auto px-5 scrollbar-hidden w-full'>
+                <ul className='inline-flex gap-5 overflow-x-auto px-5 md:px-0 scrollbar-hidden w-full'>
                   {getSkills()
                     .filter((skill) => skill.categories.includes(category))
                     .map((skill) => (
@@ -261,9 +266,22 @@ function getSkills() {
     { name: 'Vue', strong: 2, categories: [FRONTEND], link: 'https://vuejs.org/' },
   ];
 
+  skillsData.forEach((skill) => {
+    skill.categories.push(ALL);
+  });
+
   return skillsData.sort((a, b) => a.name.localeCompare(b.name));
 }
 
 function getAllCategories() {
-  return [BACKEND, FRONTEND, FULLSTACK, DATABASE, DEVOPS_INFRA, AUTOMATION_DATA_EXTRACTION, OTHER];
+  return [
+    ALL,
+    BACKEND,
+    FRONTEND,
+    FULLSTACK,
+    DATABASE,
+    DEVOPS_INFRA,
+    AUTOMATION_DATA_EXTRACTION,
+    OTHER,
+  ];
 }

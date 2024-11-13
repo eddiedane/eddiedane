@@ -9,7 +9,7 @@ export default function About() {
     <section
       id='about'
       className={cn(
-        'min-h-screen snap-center',
+        'min-h-screen snap-center snap-always',
         'bg-stone-200 dark:bg-stone-900',
         'relative overflow-hidden',
         'flex items-center justify-center',
