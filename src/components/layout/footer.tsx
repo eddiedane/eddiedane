@@ -84,7 +84,7 @@ export default function Footer() {
         <FooterArt />
       </div>
 
-      <hr className='my-8' />
+      <hr className='my-8 border-stone-300 dark:border-stone-800' />
 
       <div className='text-center text-sm text-stone-500 dark:text-stone-600 font-semibold'>
         {new Date().getFullYear()} Eddie Dane
