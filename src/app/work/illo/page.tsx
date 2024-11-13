@@ -95,10 +95,10 @@ export default function IlloPage() {
           >
             <p
               className={cn(
-                'text-stone-900 dark:text-stone-100',
-                'prose prose-stone sm:prose-xl prose-base',
+                'prose prose-stone dark:prose-invert sm:prose-xl prose-base',
                 'lg:max-w-[26em]',
                 'px-5 sm:px-10 lg:px-0',
+                'text-justify sm:text-left',
               )}
             >
               illo is an <em className='text-orange-600'>exclusive</em> e-commerce platform aimed at
@@ -121,7 +121,7 @@ export default function IlloPage() {
           >
             <div className='text-center'>
               <h2 className={cn('text-stone-900 dark:text-stone-100')}>Features</h2>
-              <p className='prose prose-sm text-xs mt-2 text-yellow-700'>
+              <p className='prose prose-sm text-xs mt-2 !text-orange-300'>
                 Below are some basic features that I can showcase.
               </p>
             </div>
@@ -182,14 +182,14 @@ export default function IlloPage() {
               </figure>
               <div className='col-span-12 row-span-3 xl:col-span-5 lg:col-span-8 flex flex-col gap-2 justify-center'>
                 <h3 className='text-xl'>Experience working on illo</h3>
-                <p className='prose prose-sm w-full text-stone-600 dark:text-stone-400'>
+                <p className='prose prose-sm w-full !text-stone-600 dark:!text-stone-400 text-justify sm:text-left'>
                   When I initially joined the team as a junior developer, I knew very little about
                   the inner workings of e-commerce. However, I was fortunate to have had the
                   opportunity to work with the founder who was an expert and with his patience and
                   guidance, I was able to learn and grow my skills, working on and implementing
                   features that I never would have imagined I could build.
                 </p>
-                <p className='prose prose-sm w-full text-stone-600 dark:text-stone-400'>
+                <p className='prose prose-sm w-full !text-stone-600 dark:!text-stone-400 text-justify sm:text-left'>
                   I learned to adapt and be flexible in different environment and situations,
                   <br /> I am forever grateful for the experience and the knowledge I gained while
                   working on illo.
