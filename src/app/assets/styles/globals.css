@@ -2,6 +2,7 @@
 @import './utilities.css';
 @import './squares.css';
 @import './loaders.css';
+@import './intro.css';
 
 @tailwind base;
 
