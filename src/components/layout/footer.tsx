@@ -45,11 +45,12 @@ export default function Footer() {
 
       <div
         className={cn(
+          'container',
           'absolute inset-0 z-0 -mt-28',
           'flex flex-col justify-center items-end',
           'tracking-tight font-bold uppercase',
           'text-stone-400 dark:text-stone-700',
-          'pr-5',
+          'pr-5 md:pr-0',
         )}
       >
         <span
@@ -79,11 +80,13 @@ export default function Footer() {
           Versatile
         </span>
       </div>
-      <div className='absolute inset-0 xl:inset-auto xl:right-0 xl:top-0 xl:w-1/2 xl:h-96 h-64 md:h-[25em] z-10'>
+      <div className='absolute inset-0 xl:inset-auto xl:right-0 xl:top-0 xl:w-1/2 xl:h-96 h-64 md:h-[25em] z-0'>
         <FooterArt />
       </div>
 
-      <div className='text-center text-sm text-stone-500 dark:text-stone-600 font-semibold mt-10'>
+      <hr className='my-8' />
+
+      <div className='text-center text-sm text-stone-500 dark:text-stone-600 font-semibold'>
         {new Date().getFullYear()} Eddie Dane
       </div>
     </div>
