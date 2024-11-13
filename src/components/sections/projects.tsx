@@ -5,6 +5,17 @@ import Link from 'next/link';
 import illoLogo from '@/app/assets/images/illo/logo.svg';
 import illoAnalyticsCropped from '@/app/assets/images/illo/analytics-orders-mini.jpg';
 import rakeConfig from '@/app/assets/images/rake/rake-config.png';
+import { HiSquares2X2 } from 'react-icons/hi2';
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogPortal,
+  DialogOverlay,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from '@/components/ui/dialog';
 
 type ProjectCardProps = {
   size?: 72 | 64;
@@ -41,8 +52,63 @@ export default function Projects() {
         <li>
           <IlloProjectCard />
         </li>
-        <li>
-          <RakeProjectCard />
+        <li className='self-center'>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                className={cn(
+                  'p-2 rounded-full',
+                  'bg-stone-300 dark:bg-stone-800',
+                  'hover:bg-stone-400/50 dark:hover:bg-stone-700/50',
+                  'transition-all duration-300',
+                  'scale-100 hover:scale-95 active:scale-90',
+                )}
+              >
+                <HiSquares2X2 className={cn('text-stone-700 dark:text-stone-300', '!text-8xl')} />
+              </button>
+            </DialogTrigger>
+            <DialogPortal>
+              <DialogOverlay className='bg-stone-50/20 backdrop-blur-md'>
+                <DialogContent className='bg-stone-200 dark:bg-stone-900 max-h-[85vh] flex flex-col gap-6 border-none px-0'>
+                  <DialogHeader className='px-5 relative'>
+                    <DialogTitle className='tracking-wide text-2xl lowercase smallcaps text-stone-900 dark:text-stone-200'>
+                      Miscellaneous Projects
+                    </DialogTitle>
+                    <DialogDescription className='text-stone-700 dark:text-stone-400 sr-only'>
+                      A collection of tools, packages and other projects.
+                    </DialogDescription>
+                  </DialogHeader>
+                  <ul className='flex flex-col gap-6'>
+                    <li
+                      className={cn(
+                        'flex flex-col items-start gap-1 p-5',
+                        'bg-transparent',
+                        'hover:bg-stone-300 dark:hover:bg-stone-700/20',
+                      )}
+                    >
+                      <Link href='/project/rake' className='block w-full'>
+                        <span
+                          className={cn(chakraPetch.className, 'font-black text-green-600 text-xl')}
+                        >
+                          rake CLI&nbsp;
+                        </span>
+                        <small>
+                          Configuration base CLI tool for automation and data extraction.
+                        </small>
+                      </Link>
+                      <Link
+                        href='https://pypi.org/project/rake-python/'
+                        className='text-sm text-stone-500 hover:text-stone-600 dark:hover:text-stone-400 hover:underline underline-offset-2'
+                        target='_blank'
+                      >
+                        view on PyPI
+                      </Link>
+                    </li>
+                  </ul>
+                </DialogContent>
+              </DialogOverlay>
+            </DialogPortal>
+          </Dialog>
         </li>
       </ul>
     </section>
