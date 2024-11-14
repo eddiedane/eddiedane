@@ -36,7 +36,7 @@ export default function Projects() {
         <h2 className='font-extrabold xl:text-4xl md:text-3xl text-2xl tracking-tighter text-stone-800 dark:text-stone-100'>
           <span className='hidden'>From&nbsp;</span>Concepts to Reality
         </h2>
-        <p className='prose prose-sm prose-stone dark:prose-invert leading-tight tracking-tight md:max-w-[36em]'>
+        <p className='prose prose-sm prose-stone dark:prose-invert !leading-5 tracking-tight md:max-w-[36em]'>
           Every project starts with an idea. Here&apos;s a collection of my work and projects, where
           concepts are transformed into functional solutions and digital experiences.
         </p>
@@ -153,40 +153,6 @@ function IlloProjectCard({ size = 72 }: ProjectCardProps) {
             <span className='text-blue-500'>x</span>
           </span>{' '}
           <br /> 2021 - 2023
-        </p>
-      </div>
-    </Link>
-  );
-}
-
-function RakeProjectCard({ size = 72 }: ProjectCardProps) {
-  return (
-    <Link
-      href='/project/rake'
-      prefetch={true}
-      className={cn('block', 'rounded-lg overflow-hidden', 'border-4 border-green-600', {
-        'min-w-72 max-w-72': size === 72,
-        'min-w-64 max-w-64': size === 64,
-      })}
-    >
-      <div
-        role='img'
-        aria-label='illo logo overlaying the order analytics page'
-        className='flex items-center relative'
-      >
-        <Image src={rakeConfig} alt='rake cli sample configuration file' loading='eager' />
-        <div className='absolute inset-0 flex items-center justify-center bg-stone-950/50 backdrop-blur-[1.5px]'>
-          <span className={cn(chakraPetch.className, 'text-7xl font-semibold text-green-600')}>
-            rake
-          </span>
-        </div>
-      </div>
-      <div className='p-3 text-sm leading-none'>
-        <h3 className='inline font-semibold text-2xl'>Rake&nbsp;</h3>
-        <p className='inline'>Configuration base CLI tool for automation and web scraping.</p>
-        <p className='text-xs font-extrabold text-stone-500 mt-3 lowercase smallcaps text-right'>
-          <span className='text-sm'>Open source</span> <br />{' '}
-          <span className='text-sky-700 text-sm'>PyPI package</span>
         </p>
       </div>
     </Link>

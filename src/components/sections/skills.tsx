@@ -53,11 +53,12 @@ export default function Skills() {
             'xl:text-4xl md:text-3xl text-2xl',
             'text-stone-800 dark:text-stone-100',
             'text-center md:text-left',
+            'leading-5',
           )}
         >
           Building Blocks<span className='hidden sm:inline'> of My Work</span>
         </h2>
-        <p className='prose prose-sm prose-stone dark:prose-invert leading-tight tracking-tight md:max-w-[30em]'>
+        <p className='prose prose-sm prose-stone dark:prose-invert !leading-4 tracking-tight md:max-w-[30em]'>
           My continuous evolving skill set is a reflection of both my curiosity and ability to adapt
           to different technologies and environments.
         </p>

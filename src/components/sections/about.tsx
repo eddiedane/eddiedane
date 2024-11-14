@@ -97,11 +97,12 @@ export default function About() {
               </em>
               <span>
                 Thinking back to my early days with programming , from writing HTML on my phone when
-                I didn’t yet have a computer to now building and deploying fully functional web apps
-                and tools, one of the things that have remained unchanged about me is my endless
-                fascination with programming, the fact that I can programmatically describe an idea
-                with code and bring it to reality, has given me a creative freedom that drives my
-                love and obsession for developing for the web
+                I didn&apos;t yet have a computer to now building and deploying fully functional web
+                apps and tools, one of the things that have remained unchanged about me is my
+                endless fascination with programming, the fact that I can programmatically describe
+                an idea with code and bring it to reality. This has given me a creative freedom that
+                drives my love and obsession for developing for the web, which has lead me to solve
+                some amazing problems that the early me would have thought were impossible.
               </span>
             </p>
           </div>
