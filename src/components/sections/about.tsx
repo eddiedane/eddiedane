@@ -101,8 +101,8 @@ export default function About() {
                 apps and tools, one of the things that have remained unchanged about me is my
                 endless fascination with programming, the fact that I can programmatically describe
                 an idea with code and bring it to reality. This has given me a creative freedom that
-                drives my love and obsession for developing for the web, which has lead me to solve
-                some amazing problems that the early me would have thought were impossible.
+                drives my love and obsession for developing for the web, leading me to solve some
+                amazing problems that the early me would have thought were impossible.
               </span>
             </p>
           </div>
