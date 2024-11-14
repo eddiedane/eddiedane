@@ -1,21 +1,21 @@
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { IoAccessibility } from 'react-icons/io5';
 import { FaAccessibleIcon } from 'react-icons/fa6';
-import mysqlLogo from '@/app/assets/images/skills/mysql.png';
-import mongodbLogo from '@/app/assets/images/skills/mongodb.png';
-import postgresLogo from '@/app/assets/images/skills/postgresql.png';
-import nextLogo from '@/app/assets/images/skills/next.png';
-import reactLogo from '@/app/assets/images/skills/react.svg';
-import goLogo from '@/app/assets/images/skills/go.svg';
-import nodeLogo from '@/app/assets/images/skills/node.svg';
-import pythonLogo from '@/app/assets/images/skills/python.svg';
-import gitLogo from '@/app/assets/images/skills/git.svg';
-import kubernetesLogo from '@/app/assets/images/skills/kubernetes.svg';
-import dockerLogo from '@/app/assets/images/skills/docker.svg';
-import awsLogo from '@/app/assets/images/skills/aws.svg';
+import { cn } from '../../lib/utils';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import mysqlLogo from '../../app/assets/images/skills/mysql.png';
+import mongodbLogo from '../../app/assets/images/skills/mongodb.png';
+import postgresLogo from '../../app/assets/images/skills/postgresql.png';
+import nextLogo from '../../app/assets/images/skills/next.png';
+import reactLogo from '../../app/assets/images/skills/react.svg';
+import goLogo from '../../app/assets/images/skills/go.svg';
+import nodeLogo from '../../app/assets/images/skills/node.svg';
+import pythonLogo from '../../app/assets/images/skills/python.svg';
+import gitLogo from '../../app/assets/images/skills/git.svg';
+import kubernetesLogo from '../../app/assets/images/skills/kubernetes.svg';
+import dockerLogo from '../../app/assets/images/skills/docker.svg';
+import awsLogo from '../../app/assets/images/skills/aws.svg';
 
 type Skill = {
   name: string;

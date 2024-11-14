@@ -1,27 +1,20 @@
 'use client';
 
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+import { useEffect, useState } from 'react';
+import { ToastAction } from '@radix-ui/react-toast';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form';
 import * as z from 'zod';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 import { Textarea } from './ui/textarea';
-import { useToast } from '@/hooks/use-toast';
-import { ToastAction } from '@radix-ui/react-toast';
-import { fromBase64Url } from '@/lib/base64';
-import { useEffect, useState } from 'react';
-import { cn } from '@/lib/utils';
-import BlocksLoader from '@/components/blocks-loader';
-import { useRouter } from 'next/navigation';
-import { usePathname } from 'next/navigation';
+import { useToast } from '../hooks/use-toast';
+import { fromBase64Url } from '../lib/base64';
+import { cn } from '../lib/utils';
+import BlocksLoader from './blocks-loader';
 
 type MessageFormProps = {
   onLoading?: (state: boolean) => void;

@@ -1,13 +1,13 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import Image from 'next/image';
-import analytics from '@/app/assets/images/illo/analytics-orders.jpg';
-import orders from '@/app/assets/images/illo/orders.jpg';
-import productListing from '@/app/assets/images/illo/product-listing.jpg';
-import stores from '@/app/assets/images/illo/stores.jpg';
-import illoLogo from '@/app/assets/images/illo/logo.svg';
-import ProjectInfo from '@/components/project-info';
-import Footer from '@/components/layout/footer';
+import analytics from '../../../app/assets/images/illo/analytics-orders.jpg';
+import orders from '../../../app/assets/images/illo/orders.jpg';
+import productListing from '../../../app/assets/images/illo/product-listing.jpg';
+import stores from '../../../app/assets/images/illo/stores.jpg';
+import illoLogo from '../../../app/assets/images/illo/logo.svg';
+import ProjectInfo from '../../../components/project-info';
+import Footer from '../../../components/layout/footer';
 
 type Info = {
   type: string;

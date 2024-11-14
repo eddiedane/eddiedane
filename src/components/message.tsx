@@ -1,10 +1,10 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState } from 'react';
 import { BiSolidMessageDetail } from 'react-icons/bi';
+import { cn } from '../lib/utils';
 import {
   Dialog,
   DialogContent,
@@ -14,8 +14,8 @@ import {
   DialogPortal,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
-import MessageForm from '@/components/message-form';
+} from './ui/dialog';
+import MessageForm from './message-form';
 import { Button } from './ui/button';
 
 type MessageBtnProps = {

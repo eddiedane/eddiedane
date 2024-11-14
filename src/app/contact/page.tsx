@@ -1,5 +1,5 @@
-import MessageForm from '@/components/message-form';
-import Footer from '@/components/layout/footer';
+import MessageForm from '../../components/message-form';
+import Footer from '../../components/layout/footer';
 
 export default function ContactPage() {
   return (

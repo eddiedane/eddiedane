@@ -2,9 +2,9 @@
 
 import { Canvas } from '@react-three/fiber';
 import { Float } from '@react-three/drei';
-import Model from '@/components/3d/model';
-import { cn } from '@/lib/utils';
 import { ErrorBoundary } from 'react-error-boundary';
+import Model from '../components/3d/model';
+import { cn } from '../lib/utils';
 
 export default function FooterArt({ className = '' }) {
   return (

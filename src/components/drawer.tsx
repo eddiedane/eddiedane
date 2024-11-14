@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { BiSolidMessageDetail } from 'react-icons/bi';
+import { cn } from '../lib/utils';
+import { Button } from './ui/button';
 import {
   Sheet,
   SheetContent,
@@ -11,11 +12,11 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@/components/ui/sheet';
-import { BiSolidMessageDetail } from 'react-icons/bi';
+} from './ui/sheet';
 import { CgMenuRight } from 'react-icons/cg';
-import Contacts from '@/components/contacts';
-import { navigation } from '@/data';
+import Contacts from './contacts';
+import { navigation } from '../data';
+
 type DrawerProps = {
   activeSection?: string;
 };

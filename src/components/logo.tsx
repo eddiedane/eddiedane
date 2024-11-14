@@ -1,10 +1,10 @@
 'use client';
 
-import { majorMonoDisplay } from '@/app/assets/fonts';
-import { cn } from '@/lib/utils';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
 import { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { majorMonoDisplay } from '../app/assets/fonts';
+import { cn } from '../lib/utils';
 
 type LogoProps = {
   className?: string;

@@ -1,11 +1,11 @@
 'use client';
 
-import FragLink from '@/components/frag-link';
-import Logo from '@/components/logo';
-import Drawer from '@/components/drawer';
-import { navigation } from '@/data';
 import { useState } from 'react';
-import { cn } from '@/lib/utils';
+import FragLink from '../../components/frag-link';
+import Logo from '../../components/logo';
+import Drawer from '../../components/drawer';
+import { navigation } from '../../data';
+import { cn } from '../../lib/utils';
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('Intro');

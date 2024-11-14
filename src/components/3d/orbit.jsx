@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ContactShadows, Environment, Float, Text3D } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 import { CentralObject, RevolvingObject } from './revolving-object';
 import Model from './model';
 

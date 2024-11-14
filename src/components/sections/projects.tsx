@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
-import { chakraPetch } from '@/app/assets/fonts';
-import Link from 'next/link';
-import illoLogo from '@/app/assets/images/illo/logo.svg';
-import illoAnalyticsCropped from '@/app/assets/images/illo/analytics-orders-mini.jpg';
-import rakeConfig from '@/app/assets/images/rake/rake-config.png';
 import { HiSquares2X2 } from 'react-icons/hi2';
+import { cn } from '../../lib/utils';
+import { chakraPetch } from '../../app/assets/fonts';
+import Link from 'next/link';
+import illoLogo from '../../app/assets/images/illo/logo.svg';
+import illoAnalyticsCropped from '../../app/assets/images/illo/analytics-orders-mini.jpg';
 import {
   Dialog,
   DialogContent,
@@ -15,7 +14,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from '@/components/ui/dialog';
+} from '../ui/dialog';
 
 type ProjectCardProps = {
   size?: 72 | 64;

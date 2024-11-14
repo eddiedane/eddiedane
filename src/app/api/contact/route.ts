@@ -1,4 +1,4 @@
-import { transporter } from '@/lib/mailer';
+import { transporter } from '../../../lib/mailer';
 import { NextResponse } from 'next/server';
 import { isEmail } from 'validator';
 

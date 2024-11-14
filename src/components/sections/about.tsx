@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import profilePicture from '@/app/assets/images/profile.jpeg';
-import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { reey } from '@/app/assets/fonts';
-import { FaLocationDot } from 'react-icons/fa6';
 import { FaCode } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
+import profilePicture from '../../app/assets/images/profile.jpeg';
+import { cn } from '../../lib/utils';
+import { reey } from '../../app/assets/fonts';
 
 export default function About() {
   return (

@@ -1,6 +1,6 @@
-import { cn } from '@/lib/utils';
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
+import { cn } from '../lib/utils';
 
 type BookProps = {
   image: string | StaticImageData;

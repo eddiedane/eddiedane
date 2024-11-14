@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import '@/app/assets/styles/globals.css';
-import { metropolis } from '@/app/assets/fonts';
-import { cn } from '@/lib/utils';
-import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/layout/header';
+import '../app/assets/styles/globals.css';
+import { metropolis } from '../app/assets/fonts';
+import { cn } from '../lib/utils';
+import { Toaster } from '../components/ui/toaster';
+import Header from '../components/layout/header';
 
 export const metadata: Metadata = {
   title: 'Eddie Dane — Web Developer',

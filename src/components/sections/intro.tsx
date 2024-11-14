@@ -1,6 +1,6 @@
-import Orbit from '@/components/3d/orbit';
-import { cn } from '@/lib/utils';
-import { notable } from '@/app/assets/fonts';
+import Orbit from '../3d/orbit';
+import { cn } from '../../lib/utils';
+import { notable } from '../../app/assets/fonts';
 import Contacts from '../contacts';
 import Message from '../message';
 
