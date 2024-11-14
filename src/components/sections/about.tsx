@@ -84,7 +84,8 @@ export default function About() {
                 Bringing solutions to the web for over five years now, with accessible,
                 user-friendly, efficient and scalable applications.&nbsp;
                 <Link
-                  href='#'
+                  target='_blank'
+                  href='/resume.pdf'
                   className={cn(
                     'inline-block',
                     'uppercase text-base text-orange-700 font-black tracking-wider',
