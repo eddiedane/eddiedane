@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { chakraPetch } from '../../../app/assets/fonts';
-import { cn } from '../../../lib/utils';
-import rakeExampleConfig from '../../../app/assets/images/rake/rake-config.png';
-import ProjectInfo, { Info } from '../../../components/project-info';
-import Footer from '../../../components/layout/footer';
+import { chakraPetch } from '@/app/assets/fonts';
+import { cn } from '@/lib/utils';
+import rakeExampleConfig from '@/app/assets/images/rake/rake-config.png';
+import ProjectInfo, { Info } from '@/components/project-info';
+import Footer from '@/components/layout/footer';
 
 const info: Info[] = [
   { type: 'category', value: 'Open Source' },

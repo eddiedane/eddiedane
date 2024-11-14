@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FaXTwitter, FaLinkedin, FaGithub } from 'react-icons/fa6';
-import { cn } from '../lib/utils';
+import { cn } from '@/lib/utils';
 
 type ContactsProps = {
   showLabel?: boolean;

@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { BiSolidMessageDetail } from 'react-icons/bi';
-import { cn } from '../lib/utils';
-import { Button } from './ui/button';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,

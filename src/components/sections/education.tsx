@@ -1,19 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { StaticImageData } from 'next/image';
-import { cn } from '../../lib/utils';
-import cs50xGoldFramed from '../../app/assets/images/trophies/cs50x-gold-framed.png';
-import cs50pGoldFramed from '../../app/assets/images/trophies/cs50p-gold-framed.png';
-import cs50wGoldFramed from '../../app/assets/images/trophies/cs50w-gold-framed.png';
-import atomicHabits from '../../app/assets/images/books/atomic-habits.jpg';
-import dockerDeepDive from '../../app/assets/images/books/docker-deep-dive.jpg';
-import identityMan from '../../app/assets/images/books/solving-identity-management.jpg';
-import grokkingAlgorithms from '../../app/assets/images/books/grokking-algorithms.jpeg';
-// import letsGo from '../../app/assets/images/books/lets-go.jpeg';
-import masteringGo from '../../app/assets/images/books/mastering-go.jpeg';
-import goProgrammingLanguage from '../../app/assets/images/books/go-programming-language.jpeg';
-import stumblingOnHappiness from '../../app/assets/images/books/stumbling-on-happiness.jpeg';
-import Book from '../../components/book';
+import { cn } from '@/lib/utils';
+import cs50xGoldFramed from '@/app/assets/images/trophies/cs50x-gold-framed.png';
+import cs50pGoldFramed from '@/app/assets/images/trophies/cs50p-gold-framed.png';
+import cs50wGoldFramed from '@/app/assets/images/trophies/cs50w-gold-framed.png';
+import atomicHabits from '@/app/assets/images/books/atomic-habits.jpg';
+import dockerDeepDive from '@/app/assets/images/books/docker-deep-dive.jpg';
+import identityMan from '@/app/assets/images/books/solving-identity-management.jpg';
+import grokkingAlgorithms from '@/app/assets/images/books/grokking-algorithms.jpeg';
+// import letsGo from '@/app/assets/images/books/lets-go.jpeg';
+import masteringGo from '@/app/assets/images/books/mastering-go.jpeg';
+import goProgrammingLanguage from '@/app/assets/images/books/go-programming-language.jpeg';
+import stumblingOnHappiness from '@/app/assets/images/books/stumbling-on-happiness.jpeg';
+import Book from '@/components/book';
 
 type Trophy = {
   name: string;

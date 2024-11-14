@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { HiSquares2X2 } from 'react-icons/hi2';
-import { cn } from '../../lib/utils';
-import { chakraPetch } from '../../app/assets/fonts';
 import Link from 'next/link';
-import illoLogo from '../../app/assets/images/illo/logo.svg';
-import illoAnalyticsCropped from '../../app/assets/images/illo/analytics-orders-mini.jpg';
+import { cn } from '@/lib/utils';
+import { chakraPetch } from '@/app/assets/fonts';
+import illoLogo from '@/app/assets/images/illo/logo.svg';
+import illoAnalyticsCropped from '@/app/assets/images/illo/analytics-orders-mini.jpg';
 import {
   Dialog,
   DialogContent,

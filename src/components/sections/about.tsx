@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaCode } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
-import profilePicture from '../../app/assets/images/profile.jpeg';
-import { cn } from '../../lib/utils';
-import { reey } from '../../app/assets/fonts';
+import profilePicture from '@/app/assets/images/profile.jpeg';
+import { cn } from '@/lib/utils';
+import { reey } from '@/app/assets/fonts';
 
 export default function About() {
   return (
@@ -84,8 +84,7 @@ export default function About() {
                 Bringing solutions to the web for over five years now, with accessible,
                 user-friendly, efficient and scalable applications.&nbsp;
                 <Link
-                  target='_blank'
-                  href='/resume.pdf'
+                  href='#'
                   className={cn(
                     'inline-block',
                     'uppercase text-base text-orange-700 font-black tracking-wider',

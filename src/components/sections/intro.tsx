@@ -1,8 +1,8 @@
-import Orbit from '../3d/orbit';
-import { cn } from '../../lib/utils';
-import { notable } from '../../app/assets/fonts';
-import Contacts from '../contacts';
-import Message from '../message';
+import Orbit from '@/components/3d/orbit';
+import { cn } from '@/lib/utils';
+import { notable } from '@/app/assets/fonts';
+import Contacts from '@/components/contacts';
+import Message from '@/components/message';
 
 export default function Intro() {
   const firstName = 'Eddie';

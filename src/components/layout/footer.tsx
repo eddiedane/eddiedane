@@ -2,11 +2,11 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { navigation } from '../../data';
-import FooterArt from '../../components/3d/footer-art';
-import { cn } from '../../lib/utils';
-import Contacts from '../contacts';
-import Message from '../message';
+import { navigation } from '@/data';
+import FooterArt from '@/components/3d/footer-art';
+import { cn } from '@/lib/utils';
+import Contacts from '@/components/contacts';
+import Message from '@/components/message';
 
 export default function Footer() {
   const pathname = usePathname();

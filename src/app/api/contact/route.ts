@@ -1,6 +1,6 @@
-import { transporter } from '../../../lib/mailer';
 import { NextResponse } from 'next/server';
 import { isEmail } from 'validator';
+import { transporter } from '@/lib/mailer';
 
 export async function POST(request: Request) {
   const { name, email, subject, message, company } = await request.json();
