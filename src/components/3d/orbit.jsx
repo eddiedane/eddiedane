@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { ContactShadows, Environment, Float, Text3D } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { cn } from '@/lib/utils';
-import { CentralObject, RevolvingObject } from '@/components/revolving-object';
-import Model from '@/components/model';
+import { CentralObject, RevolvingObject } from '@/components/3d/revolving-object';
+import Model from '@/components/3d/model';
 
 export default function Orbit({ className = '' }) {
   const centralObjectRef = useRef();
