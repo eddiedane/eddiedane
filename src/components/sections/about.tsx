@@ -37,6 +37,7 @@ export default function About() {
             <span>Dane</span>
           </div>
           <Image
+            loading='eager'
             src={profilePicture}
             alt="Eddie Dane's Portrait"
             className='abt-img xl:max-w-sm lg:max-w-xs max-w-full'
@@ -118,6 +119,7 @@ export default function About() {
             Eddie
           </span>
           <Image
+            loading='eager'
             src={profilePicture}
             alt="Eddie Dane's Portrait"
             className={cn('xl:max-w-52 sm:max-w-52 max-w-60', 'rounded-e-full')}

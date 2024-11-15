@@ -4,18 +4,18 @@ import { IoAccessibility } from 'react-icons/io5';
 import { FaAccessibleIcon } from 'react-icons/fa6';
 import { cn } from '@/lib/utils';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import mysqlLogo from '@/app/assets/images/skills/mysql.png';
-import mongodbLogo from '@/app/assets/images/skills/mongodb.png';
-import postgresLogo from '@/app/assets/images/skills/postgresql.png';
-import nextLogo from '@/app/assets/images/skills/next.png';
-import reactLogo from '@/app/assets/images/skills/react.svg';
-import goLogo from '@/app/assets/images/skills/go.svg';
-import nodeLogo from '@/app/assets/images/skills/node.svg';
-import pythonLogo from '@/app/assets/images/skills/python.svg';
-import gitLogo from '@/app/assets/images/skills/git.svg';
-import kubernetesLogo from '@/app/assets/images/skills/kubernetes.svg';
-import dockerLogo from '@/app/assets/images/skills/docker.svg';
-import awsLogo from '@/app/assets/images/skills/aws.svg';
+import ReactLogo from '@/components/svg/react-logo';
+import GoLogo from '@/components/svg/go-logo';
+import NodeLogo from '@/components/svg/node-logo';
+import PythonLogo from '@/components/svg/python.logo';
+import GitLogo from '@/components/svg/git-logo';
+import K8Logo from '@/components/svg/k8-logo';
+import DockerLogo from '@/components/svg/docker-logo';
+import AwsLogo from '@/components/svg/aws-logo';
+import NextLogo from '@/components/svg/next-logo';
+import MysqlLogo from '@/components/svg/mysql-logo';
+import MongodbLogo from '@/components/svg/mongodb-logo';
+import PostgresqlLogo from '../svg/postgresql-logo';
 
 type Skill = {
   name: string;
@@ -63,14 +63,10 @@ export default function Skills() {
           to different technologies and environments.
         </p>
       </div>
-      <div className='container md:!max-w-[36em] lg:!max-w-[56em] xl:!max-w-[62em] w-full'>
+      <div className='container md:!max-w-[36em] lg:!max-w-[44em] xl:!max-w-[62em] w-full'>
         <div className='px-5 md:px-0 grid grid-cols-12 grid-rows-5 xl:grid-rows-4 gap-2 sm:gap-3 lg:gap-4 md:!max-h-[24em] lg:!max-h-max xl:!max-h-[20em]'>
           <div className='skills-block col-span-6 sm:col-span-5 xl:col-span-4 row-span-2 xl:row-span-3 flex-col gap-1'>
-            <Image
-              src={goLogo}
-              alt='The go programming language'
-              className='w-10/12 sm:w-8/12 h-auto'
-            />
+            <GoLogo className='w-10/12 sm:w-8/12 h-auto' />
             <span
               className={cn(
                 'font-extrabold',
@@ -85,7 +81,7 @@ export default function Skills() {
             </span>
           </div>
           <div className='skills-block col-span-2 xl:col-span-1 row-span-1'>
-            <Image src={nextLogo} alt='Next.js' className='w-14 md:w-12 lg:w-14 h-auto' />
+            <NextLogo className='w-14 md:w-12 lg:w-14 h-auto' />
           </div>
           <div className='skills-block col-span-4 sm:col-span-3 xl:col-span-2 row-span-1 flex justify-center items-center'>
             <span
@@ -102,11 +98,7 @@ export default function Skills() {
           </div>
 
           <div className='skills-block col-span-2 xl:col-span-1 row-span-1'>
-            <Image
-              src={reactLogo}
-              alt='React, the library for web and native user interfaces'
-              className='sm:w-14 w-16 md:12 h-auto'
-            />
+            <ReactLogo className='sm:w-14 w-16 md:12 h-auto' />
           </div>
 
           <div className='skills-block row-span-1 col-span-4 sm:col-span-7 xl:col-span-4 relative'>
@@ -127,25 +119,25 @@ export default function Skills() {
           </div>
 
           <div className='skills-block col-span-2 xl:col-span-1 row-span-2 flex-col items-center gap-4'>
-            <Image src={nodeLogo} alt='Node' className='w-14 h-auto' />
-            <Image src={pythonLogo} alt='Python' className='w-10 sm:w-14 h-auto' />
+            <NodeLogo className='w-10 sm:w-14 h-auto' />
+            <PythonLogo className='w-10 sm:w-14 h-auto' />
           </div>
 
           <div className='skills-block col-span-5 xl:col-span-4 row-span-2 xl:row-span-3 flex-col flex-wrap gap-2'>
-            <div className='flex justify-center items-center gap-4'>
-              <Image src={mysqlLogo} alt='MySQL' className='w-10 sm:w-16 xl:w-20 h-auto' />
-              <Image src={postgresLogo} alt='PostgreSQL' className='w-10 sm:w-16 xl:w-20 h-auto' />
+            <div className='flex justify-center items-center gap-2 sm:gap-4'>
+              <MysqlLogo className='w-16 sm:w-24 xl:w-32 h-auto' />
+              <PostgresqlLogo className='w-10 sm:w-16 xl:w-20 h-auto' />
             </div>
-            <Image src={mongodbLogo} alt='MongoDB' className='w-32 sm:w-36 xl:w-48 h-auto' />
+            <MongodbLogo className='w-24 sm:w-32 xl:w-48 h-auto' />
           </div>
 
           <div className='skills-block col-span-5 xl:col-span-3 row-span-1 gap-2 sm:gap-3'>
-            <Image src={kubernetesLogo} alt='Kubernetes' className='w-7 sm:w-10 h-auto' />
-            <Image src={dockerLogo} alt='Docker' className='w-24 sm:w-32 h-auto' />
+            <K8Logo className='w-7 sm:w-10 h-auto' />
+            <DockerLogo className='w-24 sm:w-32 h-auto' />
           </div>
 
           <div className='skills-block row-span-2 col-span-5 xl:col-span-3 xl:row-span-2'>
-            <Image src={awsLogo} alt='AWS' className='w-24 sm:w-32 lg:w-52 h-auto' />
+            <AwsLogo className='w-24 sm:w-32 lg:w-52 h-auto' />
           </div>
 
           <div className='skills-block row-span-1 col-span-4 xl:col-span-3'>
@@ -155,7 +147,7 @@ export default function Skills() {
           </div>
 
           <div className='skills-block col-span-3 xl:col-span-2 row-span-1'>
-            <Image src={gitLogo} alt='Git' className='w-16 sm:w-24 md:w-20 lg:w-24 h-auto' />
+            <GitLogo className='w-16 sm:w-24 md:w-20 lg:w-24 h-auto' />
           </div>
         </div>
         <div>

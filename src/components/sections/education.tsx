@@ -118,7 +118,13 @@ export default function Education() {
             >
               {books.map(({ name, image }, i) => (
                 <li key={i}>
-                  <Book className='edu-book' image={image} key={i} title={name} />
+                  <Book
+                    className='edu-book'
+                    image={image}
+                    key={i}
+                    title={name}
+                    loading={i < 4 ? 'eager' : 'lazy'}
+                  />
                 </li>
               ))}
             </ul>
@@ -140,6 +146,7 @@ export default function Education() {
                     className={cn('trophy-lg', 'flex flex-col items-center gap-3')}
                   >
                     <Image
+                      loading={i < 2 ? 'eager' : 'lazy'}
                       src={image}
                       key={name}
                       alt={name + ' certificate'}
@@ -184,7 +191,13 @@ export default function Education() {
             )}
           >
             {books.map(({ name, image }, i) => (
-              <Book className='edu-book-sm' image={image} key={i} title={name} />
+              <Book
+                className='edu-book-sm'
+                image={image}
+                key={i}
+                title={name}
+                loading={i < 4 ? 'eager' : 'lazy'}
+              />
             ))}
           </div>
         </div>
@@ -214,6 +227,7 @@ export default function Education() {
                   key={name}
                   alt={name + ' certificate'}
                   className='sm:max-w-60 max-w-36 border'
+                  loading={i < 2 ? 'eager' : 'lazy'}
                 />
                 <span
                   className={cn(
