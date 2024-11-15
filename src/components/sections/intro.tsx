@@ -11,9 +11,15 @@ export default function Intro() {
   return (
     <section
       id='intro'
-      className='bg-stone-50 dark:bg-stone-800 min-h-screen snap-center snap-always'
+      className={cn('min-h-screen', 'bg-stone-50 dark:bg-stone-800', 'snap-center snap-always')}
     >
-      <div className='container min-h-screen grid grid-cols-12 xl:px-0 lg:px-20'>
+      <div
+        id='intro-content'
+        className='container min-h-screen grid grid-cols-12 xl:px-0 lg:px-20'
+        style={{
+          opacity: 0,
+        }}
+      >
         <div
           className={cn(
             'relative z-10',

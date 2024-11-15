@@ -3,10 +3,14 @@
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
+import { useEffect } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Pizazz() {
+  const hash = typeof window !== 'undefined' ? window.location.hash : '';
+
   useGSAP(() => {
     // Intro Section
     const animSpanFrom = {
@@ -28,6 +32,16 @@ export default function Pizazz() {
     gsap
       .timeline()
       .delay(1)
+      .fromTo(
+        '#intro-content',
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          duration: 0.05,
+        },
+      )
       .fromTo(
         '#names > span:nth-child(1)',
         Object.assign(Object.assign({}, animSpanFrom), {
@@ -77,6 +91,21 @@ export default function Pizazz() {
         },
       });
   });
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      const scrollElement = document.querySelector('.snap-mandatory');
+
+      if (element && scrollElement) {
+        const yOffset = element.getBoundingClientRect().top + scrollElement.scrollTop;
+        scrollElement.scrollTo({
+          top: yOffset,
+          behavior: 'instant',
+        });
+      }
+    }
+  }, [hash]);
 
   return null;
 }
