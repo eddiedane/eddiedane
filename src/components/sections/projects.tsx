@@ -68,7 +68,14 @@ export default function Projects() {
             </DialogTrigger>
             <DialogPortal>
               <DialogOverlay className='bg-stone-50/20 backdrop-blur-md'>
-                <DialogContent className='bg-stone-200 dark:bg-stone-900 max-h-[85vh] flex flex-col gap-6 border-none px-0'>
+                <DialogContent
+                  className={cn(
+                    'bg-stone-200 dark:bg-stone-900',
+                    'max-h-[85vh]',
+                    'flex flex-col gap-6',
+                    'border-none px-0 pb-0',
+                  )}
+                >
                   <DialogHeader className='px-5 relative'>
                     <DialogTitle className='tracking-wide text-2xl lowercase smallcaps text-stone-900 dark:text-stone-200'>
                       Miscellaneous Projects
