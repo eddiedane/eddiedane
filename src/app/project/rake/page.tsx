@@ -31,7 +31,7 @@ const info: Info[] = [
 export default function RakePage() {
   return (
     <>
-      <main id='projects' className='min-h-screen bg-stone-200 dark:bg-stone-900'>
+      <main id='projects' className='min-h-screen bg-stone-200 dark:bg-stone-900 mb-12'>
         <div className='container px-5 py-24 flex flex-col gap-12 items-center'>
           <div
             className={cn(
@@ -94,7 +94,7 @@ export default function RakePage() {
                   src={rakeExampleConfig}
                   alt='Rake example config'
                   width={480}
-                  className='max-w-full rounded-xl shadow-xl shadow-green-700'
+                  className='max-w-full rounded-xl shadow-xl shadow-green-700 mb-4'
                 />
                 <ProjectInfo info={info} />
               </div>
